@@ -22,7 +22,7 @@ Push theme changes to `main` to publish an update automatically. GitHub Actions 
 4. Open **Appearance → Bottom Line Setup** and click **Import missing content**. Review the result. This is an explicit operation: activation, theme updates, and ordinary page loads never run the importer.
 5. Review **Settings → Reading**, **Settings → Permalinks**, and **Appearance → Menus**. On a new site the importer selects the Home page and assigns both menus. Existing reading/menu choices are preserved.
 6. Edit content in Pages, Team, and Theme Settings. Exclude the Contact page and `wp-admin/admin-post.php` from any full-page/CDN cache; forms and private feedback require fresh requests.
-7. Submit a test enquiry and confirm it appears under **Form Submissions**. Storage is authoritative; the theme does not send email notifications.
+7. Submit a test enquiry and confirm it appears under **Form Submissions**. Set **Theme Settings → Contact and Social → Form notification email** to receive new enquiry notifications. Leave blank to disable.
 
 The importer creates seven pages: Home, About, Services, Team, Clients, Contact, and Industries. Industries is a new source page for the section that existed only on the original homepage. Existing unrelated pages with matching slugs are left intact; manually assign their template and populate fields if you choose to reuse them.
 
@@ -104,3 +104,7 @@ Each icon keeps its built-in dropdown with a live visual preview underneath. The
 ## Contact validation
 
 The contact page loads WordPress jQuery and the locally bundled jQuery Validation plugin 1.21.0 (MIT). Required fields, email format and length limits show inline accessible feedback before the normal form POST. Company, phone and service remain optional. PHP validation and submission protections remain active, including when JavaScript is unavailable.
+
+## Version 1.3.4 notification email
+
+The optional Form notification email setting receives contact details and a private admin link after a new entry is saved. Replies go to the validated visitor address. Blank or invalid recipients disable delivery. Duplicate submissions do not resend notifications. Submission details show the mail handoff result; acceptance by WordPress mail does not guarantee inbox delivery. Configure the host’s mail service or SMTP as needed. Tests intercept mail and verify recipient, content, reply address, failures, saved entries and duplicate suppression without sending external email.

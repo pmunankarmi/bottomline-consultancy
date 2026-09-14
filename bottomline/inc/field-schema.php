@@ -3,6 +3,13 @@
 return array(
 	'options'      => array(
 		array(
+			'name'         => 'form_notification_email',
+			'label'        => 'Form notification email',
+			'type'         => 'email',
+			'instructions' => 'Send new contact submissions to this address. Leave blank to disable email notifications. Submissions are always saved in WordPress.',
+			'key'          => 'field_bl_form_notification_email',
+		),
+		array(
 			'name'          => 'site_logo',
 			'label'         => 'Site logo',
 			'type'          => 'image',

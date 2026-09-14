@@ -222,6 +222,7 @@ function bl_handle_contact() {
 		bl_form_result( $page, $state );
 	}
 	set_transient( $digest, 1, 10 * MINUTE_IN_SECONDS );
+	bl_notify_contact_submission( $id );
 	set_transient( $rate_key, (int) get_transient( $rate_key ) + 1, 15 * MINUTE_IN_SECONDS );
 	delete_option( $lock );
 	bl_form_result(
@@ -265,10 +266,18 @@ function bl_submissions_admin() {
 			'">' .
 			esc_html__( 'Back to submissions', 'bottomline' ) .
 			'</a></p>';
-		$rows   = array(
+		$rows                = array(
 			__( 'Form type', 'bottomline' )    => get_post_meta( $detail, '_bl_form_type', true ),
 			__( 'Submitted at', 'bottomline' ) => get_the_date( 'Y-m-d H:i:s', $post ),
 		);
+		$notification_labels = array(
+			'accepted' => __( 'Accepted by the mail service', 'bottomline' ),
+			'failed'   => __( 'Email could not be sent; submission is saved', 'bottomline' ),
+			'disabled' => __( 'Notifications disabled or recipient invalid', 'bottomline' ),
+			'sending'  => __( 'Email send started; result not recorded', 'bottomline' ),
+		);
+		$status              = get_post_meta( $detail, '_bl_notification_status', true );
+		$rows[ __( 'Email notification', 'bottomline' ) ] = $notification_labels[ $status ] ?? __( 'Not recorded', 'bottomline' );
 		$values = get_post_meta( $detail, '_bl_values', true );
 		foreach ( bl_form_columns() as $key => $label ) {
 			$rows[ $label ] = $values[ $key ] ?? '';
@@ -417,3 +426,41 @@ function bl_enqueue_contact_validation() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'bl_enqueue_contact_validation' );
+
+/**
+ * Email the configured recipient after a contact submission is stored.
+ *
+ * Notification failures do not discard the saved message or prompt a duplicate
+ * submission. WordPress controls the sender and mail transport.
+ *
+ * @param int $submission_id Saved contact submission ID.
+ */
+function bl_notify_contact_submission( $submission_id ) {
+	if ( get_post_type( $submission_id ) !== 'bl_submission' || get_post_meta( $submission_id, '_bl_notification_status', true ) ) {
+		return;
+	}
+	$recipient = bl_field( 'form_notification_email', 'option' );
+	if ( ! is_string( $recipient ) || ! is_email( $recipient ) ) {
+		update_post_meta( $submission_id, '_bl_notification_status', 'disabled' );
+		return;
+	}
+	$values = get_post_meta( $submission_id, '_bl_values', true );
+	if ( ! is_array( $values ) ) {
+		return;
+	}
+	/* translators: %d is the stored submission ID. */
+	$subject = sprintf( __( 'New contact submission #%d', 'bottomline' ), $submission_id );
+	$lines   = array( $subject, '' );
+	foreach ( bl_form_columns() as $key => $label ) {
+		$lines[] = $label . ': ' . ( $values[ $key ] ?? '' );
+	}
+	$lines[] = '';
+	$lines[] = admin_url( 'admin.php?page=bl-submissions&submission=' . $submission_id );
+	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+	if ( is_email( $values['email'] ?? '' ) ) {
+		$headers[] = 'Reply-To: ' . $values['email'];
+	}
+	update_post_meta( $submission_id, '_bl_notification_status', 'sending' );
+	$accepted = wp_mail( $recipient, $subject, implode( "\n", $lines ), $headers );
+	update_post_meta( $submission_id, '_bl_notification_status', $accepted ? 'accepted' : 'failed' );
+}

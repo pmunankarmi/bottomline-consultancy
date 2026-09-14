@@ -44,7 +44,7 @@ The ZIP also contains decorative CSS for some unused earlier design variants; it
 - Test your production MySQL/MariaDB, caching/security plugins and HTTPS configuration. Local tests used the official SQLite integration, not your production database.
 - Exclude the contact page/handler from full-page caching and perform one production form/storage/export smoke test using appropriate test data.
 - The source map is a raster image with baked-in labels: replacing/revising it is necessary if its geographic labels change. Interactive branch data and overlay positions are editable separately.
-- Cairo uses Google Fonts; map destinations are external links. Version 1.1 removes bundled content imagery; upload and assign it in the Media Library on new installations. Notifications by email are not implemented; successful submissions are stored in WordPress and visible to administrators.
+- Cairo uses Google Fonts; map destinations are external links. Version 1.1 removes bundled content imagery; upload and assign it in the Media Library on new installations. Optional notification emails use WordPress mail; successful submissions are always stored in WordPress and visible to administrators.
 
 ACF Pro, WordPress core, the test database, user credentials and test submissions are not included in the installable theme package.
 
@@ -63,3 +63,7 @@ Verified all 16 icon dropdowns retain their choices and have paired image overri
 ## Version 1.3.3 contact validation
 
 Browser checks verified empty required fields, whitespace-only names, invalid email, first-error focus, ARIA error association, and successful valid submission. All 33 HTTP checks passed, including server-side rejection, storage and authenticated CSV export.
+
+## Version 1.3.4 notification email
+
+The optional Form notification email setting receives contact details and a private admin link after a new entry is saved. Replies go to the validated visitor address. Blank or invalid recipients disable delivery. Duplicate submissions do not resend notifications. Submission details show the mail handoff result; acceptance by WordPress mail does not guarantee inbox delivery. Configure the host’s mail service or SMTP as needed. Tests intercept mail and verify recipient, content, reply address, failures, saved entries and duplicate suppression without sending external email.

@@ -47,7 +47,7 @@ add_action(
 				);
 				$tabs     = array(
 					'General'            => array( 'site_logo', 'home_client_count', 'home_team_count' ),
-					'Contact and Social' => array( 'phone', 'email', 'website_label', 'social_links', 'form_services' ),
+					'Contact and Social' => array( 'phone', 'email', 'website_label', 'social_links', 'form_services', 'form_notification_email' ),
 					'Branches'           => array( 'branches', 'map_image' ),
 					'CTA'                => array( 'cta' ),
 					'Footer'             => array( 'footer_logo', 'footer_contact_heading', 'footer' ),
