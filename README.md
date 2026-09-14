@@ -116,3 +116,7 @@ WordPress’s View version details dialog now uses a local, administrator-only v
 ## Version 1.3.6 styled notifications
 
 Theme Settings → Contact and Social includes Notification sender name and Notification sender email. Blank values retain WordPress mail defaults; SMTP plugins may enforce their configured sender. These overrides apply only to contact notifications. Emails use an escaped HTML template with inline styles, a green heading, submitted details, message panel and an admin button. Reply-To remains the visitor. Mocked delivery tests verify sender scope, HTML content, escaping, duplicate handling and failures. Layout was reviewed in the browser; actual inbox rendering depends on the email client.
+
+## Version 1.3.7 release summary
+
+Version details stay in WordPress’s existing popup and show plain-language bullet points without external links or technical requirements. Versioned summaries live in `bottomline/release-notes.json` and are included in the update manifest and published release notes. Add a summary when preparing a version; otherwise publishing uses a general maintenance note. If release information is unavailable, the popup clearly labels and displays the installed version’s saved summary. Tests verify list rendering, escaping and absence of external links.

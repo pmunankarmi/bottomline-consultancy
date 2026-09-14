@@ -91,7 +91,7 @@ function bl_github_release( $force = false ) {
 				} else {
 					$release = array(
 						'version'      => $match[1],
-						'notes'        => is_string( $release['body'] ?? null ) ? $release['body'] : '',
+						'changes'      => array_values( array_filter( (array) ( $manifest['changes'] ?? array() ), 'is_string' ) ),
 						'url'          => BL_UPDATE_REPOSITORY . '/releases/tag/' . rawurlencode( $tag ),
 						'package'      => $package,
 						'requires'     => $manifest['requires'],
@@ -192,11 +192,26 @@ function bl_render_release_details( $release ) {
 		echo '<p>' . esc_html( $release->get_error_message() ) . '</p>';
 	} else {
 		echo '<h2>' . esc_html( sprintf( __( 'Version %s', 'bottomline' ), $release['version'] ) ) . '</h2>';
-		echo '<p>' . esc_html( sprintf( __( 'Requires WordPress %1$s or later and PHP %2$s or later.', 'bottomline' ), $release['requires'], $release['requires_php'] ) ) . '</p>';
-		echo '<h2>' . esc_html__( 'Release notes', 'bottomline' ) . '</h2>';
-		echo '<div style="white-space:pre-wrap;overflow-wrap:anywhere">' . esc_html( $release['notes'] ?: __( 'No release notes were provided.', 'bottomline' ) ) . '</div>';
+		if ( ! empty( $release['installed_fallback'] ) ) {
+			echo '<p>' . esc_html__( 'Showing the installed version. New release information is temporarily unavailable.', 'bottomline' ) . '</p>';
+		}
+		echo '<h2>' . esc_html__( 'Fixes and improvements', 'bottomline' ) . '</h2>';
+		$changes = $release['changes'] ?? array();
+		if ( ! $changes ) {
+			$history = json_decode( file_get_contents( get_template_directory() . '/release-notes.json' ), true );
+			$changes = $history[ $release['version'] ] ?? array();
+		}
+		if ( $changes ) {
+			echo '<ul style="list-style:disc;padding-left:24px;line-height:1.8">';
+			foreach ( $changes as $change ) {
+				echo '<li>' . esc_html( $change ) . '</li>';
+			}
+			echo '</ul>';
+		} else {
+			echo '<p>' . esc_html__( 'No summary is available for this version.', 'bottomline' ) . '</p>';
+		}
 	}
-	echo '<p><a href="' . esc_url( BL_UPDATE_REPOSITORY . '/releases' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Open releases on GitHub', 'bottomline' ) . '</a></p></main>';
+	echo '</main>';
 }
 
 /** Serve details on the same origin so the WordPress popup can display them. */
@@ -205,8 +220,14 @@ function bl_release_details() {
 		wp_die( esc_html__( 'Access denied.', 'bottomline' ), '', array( 'response' => 403 ) );
 	}
 	$release = bl_github_release();
-	if ( is_array( $release ) && ! array_key_exists( 'notes', $release ) ) {
+	if ( is_array( $release ) && ! array_key_exists( 'changes', $release ) ) {
 		$release = bl_github_release( true );
+	}
+	if ( is_wp_error( $release ) ) {
+		$release = array(
+			'version'            => wp_get_theme( get_template() )->get( 'Version' ),
+			'installed_fallback' => true,
+		);
 	}
 	iframe_header( __( 'Theme version details', 'bottomline' ) );
 	bl_render_release_details( $release );

@@ -45,4 +45,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ steps.version.outputs.tag }}
-        run: gh release create "$RELEASE_TAG" dist/bottomline.zip dist/bottomline-update.json --verify-tag --title "Bottom Line $RELEASE_TAG" --generate-notes
+        run: gh release create "$RELEASE_TAG" dist/bottomline.zip dist/bottomline-update.json --verify-tag --title "Bottom Line $RELEASE_TAG" --notes-file dist/release-notes.md

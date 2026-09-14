@@ -29,5 +29,8 @@ with zipfile.ZipFile(dist / 'bottomline.zip', 'w', zipfile.ZIP_DEFLATED, compres
     for path in sorted(theme.rglob('*')):
         if path.is_file() and path.name != '.DS_Store':
             archive.write(path, path.relative_to(root))
-(dist / 'bottomline-update.json').write_text(json.dumps({'version': version, 'requires': header('Requires at least'), 'requires_php': header('Requires PHP')}, indent=2) + '\n')
+history = json.loads((theme / 'release-notes.json').read_text())
+changes = history.get(version, ['Theme maintenance update.'])
+(dist / 'release-notes.md').write_text('\n'.join('- ' + item for item in changes) + '\n')
+(dist / 'bottomline-update.json').write_text(json.dumps({'version': version, 'requires': header('Requires at least'), 'requires_php': header('Requires PHP'), 'changes': changes}, indent=2) + '\n')
 print('Built bottomline.zip and bottomline-update.json for v' + version)

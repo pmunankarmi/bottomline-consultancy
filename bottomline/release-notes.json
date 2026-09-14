@@ -1,0 +1,28 @@
+{
+  "1.3.7": [
+    "Fixed version details so they stay inside the WordPress popup.",
+    "Removed the GitHub link from version details.",
+    "Replaced technical release text with a clear list of fixes and improvements."
+  ],
+  "1.3.6": [
+    "Added sender name and sender email settings for contact notifications.",
+    "Improved notification emails with a styled header, enquiry details and a message panel.",
+    "Kept replies directed to the visitor who submitted the enquiry."
+  ],
+  "1.3.5": [
+    "Fixed the connection error when opening version details in WordPress."
+  ],
+  "1.3.4": [
+    "Added an email address setting for contact form notifications.",
+    "Kept submitted enquiries saved even when an email cannot be sent.",
+    "Prevented duplicate notifications for repeated submissions."
+  ],
+  "1.3.3": [
+    "Added clear contact form errors for missing details and invalid email addresses.",
+    "Moved focus to the first field that needs attention."
+  ],
+  "1.3.2": [
+    "Added previews for built-in icon selections.",
+    "Added optional image overrides while keeping the existing icon choices."
+  ]
+}

@@ -12,7 +12,7 @@ $mock=function($pre,$args,$url)use(&$mode,&$requests){
   if($mode==='foreign')$assets[0]['browser_download_url']='https://example.test/evil.zip';
   if($mode==='missing')array_pop($assets);
   $data=['tag_name'=>'v9.0.0','draft'=>false,'prerelease'=>$mode==='prerelease','assets'=>$assets,'body'=>'Fixed updater. <script>alert(1)</script>'];
- }else{$data=['version'=>$mode==='mismatch'?'8.0.0':'9.0.0','requires'=>'6.6','requires_php'=>'8.1'];}
+ }else{$data=['version'=>$mode==='mismatch'?'8.0.0':'9.0.0','requires'=>'6.6','requires_php'=>'8.1','changes'=>['Fixed updater. <script>alert(1)</script>']];}
  return ['response'=>['code'=>200],'body'=>wp_json_encode($data),'headers'=>[]];
 };
 add_filter('pre_http_request',$mock,10,3);
@@ -26,7 +26,8 @@ $fixed=bl_local_update_details($cached);
 assert_update($fixed->response[get_template()]['url']===bl_release_details_url() && $fixed->response[get_template()]['package']===$release['package'],'cached GitHub detail URLs repaired without changing ZIP');
 assert_update($fixed->no_update['unrelated']['url']==='https://example.test','unrelated theme details untouched');
 ob_start();bl_render_release_details($release);$details=ob_get_clean();
-assert_update(str_contains($details,'Version 9.0.0') && str_contains($details,'Fixed updater.'),'version and notes rendered locally');
+assert_update(str_contains($details,'Version 9.0.0') && str_contains($details,'Fixed updater.'),'version and fixes rendered locally');
+assert_update(str_contains($details,'<li>') && !str_contains($details,'<a ') && !str_contains($details,'Requires WordPress'),'details use bullet points without external links or technical requirements');
 assert_update(!str_contains($details,'<script>') && str_contains($details,'&lt;script&gt;'),'release text is escaped');
 ob_start();bl_render_release_details(new WP_Error('offline','Offline test'));$details=ob_get_clean();
 assert_update(str_contains($details,'Offline test'),'offline details show a readable error');
