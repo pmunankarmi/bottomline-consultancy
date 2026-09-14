@@ -1,29 +1,48 @@
 name: Publish WordPress theme release
 on:
   push:
-    tags:
-      - 'v*'
+    branches: [main]
+    paths:
+      - 'bottomline/**'
+      - 'scripts/**'
+      - '.github/workflows/release.yml'
+  workflow_dispatch:
 permissions:
   contents: write
 concurrency:
-  group: theme-release-${{ github.ref }}
+  group: theme-release
   cancel-in-progress: false
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Prepare release version
+        id: version
+        run: |
+          tag=$(python3 scripts/prepare-release.py)
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
       - name: Validate and package theme
         env:
-          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
         run: python3 scripts/package-release.py "$RELEASE_TAG"
+      - name: Publish release commit and tag
+        env:
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add bottomline/style.css
+          if ! git diff --cached --quiet; then
+            git commit -m "Bump theme version to $RELEASE_TAG"
+          fi
+          git tag "$RELEASE_TAG"
+          git push --atomic origin HEAD:main "refs/tags/$RELEASE_TAG"
       - name: Publish installable assets
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: ${{ github.ref_name }}
-        run: |
-          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
-            gh release upload "$RELEASE_TAG" dist/bottomline.zip dist/bottomline-update.json --clobber
-          else
-            gh release create "$RELEASE_TAG" dist/bottomline.zip dist/bottomline-update.json --verify-tag --title "Bottom Line $RELEASE_TAG" --generate-notes
-          fi
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+        run: gh release create "$RELEASE_TAG" dist/bottomline.zip dist/bottomline-update.json --verify-tag --title "Bottom Line $RELEASE_TAG" --generate-notes

@@ -21,6 +21,22 @@ $release=bl_github_release();assert_update(!is_wp_error($release)&&$release['ver
 $header=['UpdateURI'=>BL_UPDATE_REPOSITORY];$update=apply_filters('update_themes_github.com',false,$header,get_template(),[]);assert_update($update['theme']===get_template() && str_ends_with($update['package'],'/bottomline.zip'),'native update response contains installable package');
 assert_update(apply_filters('update_themes_github.com',false,['UpdateURI'=>'https://github.com/other/repo'],get_template(),[])===false,'unrelated repositories ignored');
 foreach(['foreign','missing','prerelease','mismatch','offline'] as $mode){assert_update(is_wp_error(bl_github_release(true)),$mode.' release safely rejected');}
+$mode='valid';
+$core_mock=function($pre,$args,$url){
+ if(str_contains($url,'api.wordpress.org/themes/update-check'))return ['response'=>['code'=>200],'body'=>wp_json_encode(['themes'=>[],'no_update'=>[],'translations'=>[]]),'headers'=>[]];
+ return $pre;
+};
+add_filter('pre_http_request',$core_mock,9,3);
+delete_site_transient('bl_update_check_due');
+bl_refresh_theme_updates();
+$native=get_site_transient('update_themes');
+assert_update(isset($native->response[get_template()]) && $native->response[get_template()]['new_version']==='9.0.0','admin visit populates standard WordPress update notice');
+$before=$requests;bl_refresh_theme_updates();
+assert_update($requests===$before,'repeated admin visits reuse five-minute check interval');
+assert_update(!has_action('admin_post_bl_check_updates') && !function_exists('bl_theme_updates_page'),'custom update page and check action removed');
+remove_filter('pre_http_request',$core_mock,9);
+delete_site_transient('bl_update_check_due');
+delete_site_transient('update_themes');
 remove_filter('pre_http_request',$mock,10);delete_site_transient('bl_github_release');
 $theme=wp_get_theme(get_template());assert_update($theme->get('UpdateURI')===BL_UPDATE_REPOSITORY,'theme has correct Update URI');
 wp_set_current_user(0);assert_update(!current_user_can('update_themes'),'anonymous user cannot manage updates');

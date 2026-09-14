@@ -103,7 +103,7 @@ function bl_github_release( $force = false ) {
 	set_site_transient(
 		'bl_github_release',
 		is_wp_error( $release ) ? array( 'error' => $release->get_error_message() ) : $release,
-		is_wp_error( $release ) ? 15 * MINUTE_IN_SECONDS : 6 * HOUR_IN_SECONDS,
+		is_wp_error( $release ) ? 15 * MINUTE_IN_SECONDS : 5 * MINUTE_IN_SECONDS,
 	);
 	return $release;
 }
@@ -129,74 +129,23 @@ add_filter(
 	3,
 );
 
-add_action(
-	'admin_menu',
-	function () {
-		add_theme_page(
-			__( 'Theme Updates', 'bottomline' ),
-			__( 'Theme Updates', 'bottomline' ),
-			'update_themes',
-			'bl-theme-updates',
-			'bl_theme_updates_page',
-		);
-	}
-);
-function bl_theme_updates_page() {
-	if ( ! current_user_can( 'update_themes' ) ) {
+/**
+ * Refresh native update notices when an administrator visits the dashboard.
+ *
+ * The short cache avoids requesting GitHub on every admin page. WordPress also
+ * checks in the background through its existing wp_update_themes cron event.
+ */
+function bl_refresh_theme_updates() {
+	if ( ! current_user_can( 'update_themes' ) || get_site_transient( 'bl_update_check_due' ) ) {
 		return;
 	}
-	$theme  = wp_get_theme( get_template() );
-	$cached = get_site_transient( 'bl_github_release' );
-	echo '<div class="wrap"><h1>' .
-		esc_html__( 'Theme Updates', 'bottomline' ) .
-		'</h1><p>' .
-		esc_html( sprintf( __( 'Installed version: %s', 'bottomline' ), $theme->get( 'Version' ) ) ) .
-		'</p>';
-	if ( is_array( $cached ) && isset( $cached['version'] ) ) {
-		echo '<p>' . esc_html( sprintf( __( 'Latest GitHub release: %s', 'bottomline' ), $cached['version'] ) ) . '</p>';
-		echo '<p>' .
-			esc_html(
-				version_compare( $cached['version'], $theme->get( 'Version' ), '>' )
-					? __( 'An update is available. Install it from Dashboard → Updates.', 'bottomline' )
-					: __( 'Your theme is up to date.', 'bottomline' ),
-			) .
-			'</p>';
-	} elseif ( is_array( $cached ) && isset( $cached['error'] ) ) {
-		echo '<p>' . esc_html( $cached['error'] ) . '</p>';
-	}
-	echo '<form method="post" action="' .
-		esc_url( admin_url( 'admin-post.php' ) ) .
-		'"><input type="hidden" name="action" value="bl_check_updates">';
-	wp_nonce_field( 'bl_check_updates' );
-	submit_button( __( 'Check for updates', 'bottomline' ) );
-	echo '</form>';
-	echo '<p><a class="button" href="' .
-		esc_url( admin_url( 'update-core.php' ) ) .
-		'">' .
-		esc_html__( 'Open WordPress Updates', 'bottomline' ) .
-		'</a> <a href="' .
-		esc_url( BL_UPDATE_REPOSITORY . '/releases' ) .
-		'" target="_blank" rel="noopener noreferrer">' .
-		esc_html__( 'Release history', 'bottomline' ) .
-		'</a></p></div>';
+	set_site_transient( 'bl_update_check_due', 1, 5 * MINUTE_IN_SECONDS );
+	bl_github_release( true );
+	delete_site_transient( 'update_themes' );
+	wp_update_themes();
 }
-add_action(
-	'admin_post_bl_check_updates',
-	function () {
-		if ( ! current_user_can( 'update_themes' ) ) {
-			wp_die( esc_html__( 'Access denied.', 'bottomline' ), '', array( 'response' => 403 ) );
-		}
-		if ( ( $_SERVER['REQUEST_METHOD'] ?? '' ) !== 'POST' ) {
-			wp_die( esc_html__( 'Method not allowed.', 'bottomline' ), '', array( 'response' => 405 ) );
-		}
-		check_admin_referer( 'bl_check_updates' );
-		bl_github_release( true );
-		delete_site_transient( 'update_themes' );
-		wp_update_themes();
-		wp_safe_redirect( admin_url( 'themes.php?page=bl-theme-updates' ) );
-		exit();
-	}
-);
+add_action( 'admin_init', 'bl_refresh_theme_updates' );
+
 add_action(
 	'upgrader_process_complete',
 	function ( $upgrader, $options ) {

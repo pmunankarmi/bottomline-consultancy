@@ -51,3 +51,7 @@ ACF Pro, WordPress core, the test database, user credentials and test submission
 ## Version 1.3 template refactor
 
 Verified all six custom templates are registered by WordPress; old assignments resolve to their new files; assignment migration preserves all other page metadata (24 checks). The existing content integration (119), optional sections/slider (8), lightweight theme (10), updater (12), and authenticated HTTP/form/export (33) checks pass. All six custom pages also render without ACF. PHP syntax and JavaScript syntax are checked during packaging. Formatting follows WordPress spacing conventions; this is not a claim of full WPCS compliance.
+
+## Version 1.3.1 automatic updates
+
+Verified an administrator check populates the native WordPress update transient, repeated visits reuse the check interval, and the custom updater page/action are removed. The existing GitHub release-validation tests still pass. GitHub publishing now runs on theme changes pushed to main and assigns a new patch version when needed.
