@@ -1,0 +1,35 @@
+PASS / renders
+PASS / has no static page links
+PASS /about/ renders
+PASS /about/ has no static page links
+PASS /services/ renders
+PASS /services/ has no static page links
+PASS /team/ renders
+PASS /team/ has no static page links
+PASS /clients/ renders
+PASS /clients/ has no static page links
+PASS /contact/ renders
+PASS /contact/ has no static page links
+PASS /industries/ renders
+PASS /industries/ has no static page links
+PASS /our-team/ renders
+PASS /our-team/ has no static page links
+PASS /team-member/toufic-moutran/ renders
+PASS /team-member/toufic-moutran/ has no static page links
+PASS form uses WordPress handler
+PASS invalid nonce rejected with feedback
+PASS honeypot rejected
+PASS validation error retains safe input
+PASS valid submission saved and success displayed
+PASS duplicate submit handled safely
+PASS anonymous restricted /wp-admin/admin-post.php?action=bl_export
+PASS anonymous restricted /wp-json/wp/v2/bl_submission
+Completed 26 HTTP checks
+PASS administrator submission list visible
+PASS stored submission appears in list
+PASS submission detail retains message
+PASS CSV link carries nonce
+PASS CSV has clear headings
+PASS export neutralizes stored formula value
+PASS invalid export nonce blocked
+Completed 33 HTTP checks including authenticated export

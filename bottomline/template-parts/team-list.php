@@ -1,0 +1,2 @@
+<?php $team = new WP_Query(['post_type' => 'team', 'posts_per_page' => is_front_page() ? max(1, absint(bl_field('home_team_count', 'option'))) : -1, 'orderby' => ['menu_order' => 'ASC', 'title' => 'ASC'], 'no_found_rows' => true]); if (!$team->have_posts()) { return; } ?>
+<div class="team-grid"><?php while ($team->have_posts()): $team->the_post(); get_template_part('template-parts/team-card'); endwhile; wp_reset_postdata(); ?></div>

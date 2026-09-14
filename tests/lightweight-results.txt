@@ -1,0 +1,10 @@
+PASS classic editor for posts
+PASS classic editor for pages
+PASS classic editor for team
+PASS classic widgets
+PASS missing images do not block text migration
+PASS existing media logo retained
+PASS repeat import preserves native logo
+PASS unused block CSS omitted
+PASS only preview screenshot is packaged
+PASS theme screenshot is 1200 by 900

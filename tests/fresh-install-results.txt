@@ -1,0 +1,120 @@
+PASS ACF Pro active
+PASS 32 migrated team posts
+PASS 82 canonical client records
+PASS 4 canonical branches
+PASS 2 shared testimonials
+PASS 2 editable hero slides
+PASS 4 statistic rows
+PASS unique ACF key site_logo
+PASS plain structured field site_logo
+PASS unique ACF key footer_logo
+PASS plain structured field footer_logo
+PASS unique ACF key phone
+PASS plain structured field phone
+PASS unique ACF key email
+PASS plain structured field email
+PASS unique ACF key website_label
+PASS plain structured field website_label
+PASS unique ACF key social_links
+PASS plain structured field social_links
+PASS unique ACF key label
+PASS plain structured field label
+PASS unique ACF key url
+PASS plain structured field url
+PASS unique ACF key branches
+PASS plain structured field branches
+PASS unique ACF key name
+PASS plain structured field name
+PASS unique ACF key address
+PASS plain structured field address
+PASS unique ACF key phone
+PASS plain structured field phone
+PASS unique ACF key email
+PASS plain structured field email
+PASS unique ACF key map_link
+PASS plain structured field map_link
+PASS unique ACF key country
+PASS plain structured field country
+PASS unique ACF key flag
+PASS plain structured field flag
+PASS unique ACF key tag
+PASS plain structured field tag
+PASS unique ACF key map_x
+PASS plain structured field map_x
+PASS unique ACF key map_y
+PASS plain structured field map_y
+PASS unique ACF key map_image
+PASS plain structured field map_image
+PASS unique ACF key cta
+PASS plain structured field cta
+PASS unique ACF key heading
+PASS plain structured field heading
+PASS unique ACF key description
+PASS plain structured field description
+PASS unique ACF key destination
+PASS plain structured field destination
+PASS unique ACF key btn_btn_primary
+PASS plain structured field btn_btn_primary
+PASS unique ACF key icon
+PASS plain structured field icon
+PASS unique ACF key footer
+PASS plain structured field footer
+PASS unique ACF key description
+PASS plain structured field description
+PASS unique ACF key footer_heading
+PASS plain structured field footer_heading
+PASS unique ACF key footer_heading_2
+PASS plain structured field footer_heading_2
+PASS unique ACF key label
+PASS plain structured field label
+PASS unique ACF key label_2
+PASS plain structured field label_2
+PASS unique ACF key form_services
+PASS plain structured field form_services
+PASS unique ACF key label
+PASS plain structured field label
+PASS unique ACF key home_client_count
+PASS plain structured field home_client_count
+PASS unique ACF key home_team_count
+PASS plain structured field home_team_count
+PASS unique ACF key footer_contact_heading
+PASS plain structured field footer_contact_heading
+PASS source selector about
+PASS source summary about
+PASS source selector services
+PASS source summary services
+PASS source selector clients
+PASS source summary clients
+PASS source selector industries
+PASS source summary industries
+PASS initial logo agreement
+PASS ACF logo updates native logo
+PASS ACF logo removal updates native
+PASS native logo updates ACF
+PASS native logo removal updates ACF
+PASS malformed and required values rejected
+PASS valid form accepted
+PASS forged service rejected
+PASS oversized message rejected
+PASS CSV formula neutralized
+PASS CSV formula neutralized
+PASS CSV formula neutralized
+PASS CSV formula neutralized
+PASS CSV formula neutralized
+PASS CSV formula neutralized
+PASS CSV formula neutralized
+PASS CSV quoting round trip
+PASS source-page change updates PHP section
+PASS repeat import succeeds
+PASS repeat import preserves administrator edits
+PASS repeat import preserves deliberate clearing
+PASS repeat import preserves client order
+PASS repeat import does not duplicate media
+PASS repeat import does not duplicate team
+PASS text escapes markup
+PASS textarea preserves line breaks
+PASS anonymous import blocked
+PASS subscriber cannot access submission administration
+PASS subscriber import blocked
+PASS administrator can manage submissions
+Completed 119 checks.

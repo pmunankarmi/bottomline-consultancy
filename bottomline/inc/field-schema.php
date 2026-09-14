@@ -1,0 +1,2754 @@
+<?php
+/** Version-controlled ACF field definitions. */
+return array (
+  'options' => 
+  array (
+    0 => 
+    array (
+      'name' => 'site_logo',
+      'label' => 'Site logo',
+      'type' => 'image',
+      'instructions' => 'Synchronized with Appearance → Customize → Site Identity. Removing it here removes it there.',
+      'return_format' => 'id',
+      'key' => 'field_bl_b0914776cd9ca07f',
+    ),
+    1 => 
+    array (
+      'name' => 'footer_logo',
+      'label' => 'Footer logo (reversed)',
+      'type' => 'image',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'return_format' => 'id',
+      'key' => 'field_bl_720697821ca120f8',
+    ),
+    2 => 
+    array (
+      'name' => 'phone',
+      'label' => 'Phone',
+      'type' => 'text',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'key' => 'field_bl_308acd8ba661cfd8',
+    ),
+    3 => 
+    array (
+      'name' => 'email',
+      'label' => 'Email',
+      'type' => 'email',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'key' => 'field_bl_80e0d1058fcaf57a',
+    ),
+    4 => 
+    array (
+      'name' => 'website_label',
+      'label' => 'Website label',
+      'type' => 'text',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'key' => 'field_bl_681f7b8c48b0cc4a',
+    ),
+    5 => 
+    array (
+      'name' => 'social_links',
+      'label' => 'Social links',
+      'type' => 'repeater',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'label',
+          'label' => 'Network',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_984fb8e76d3fc644',
+        ),
+        1 => 
+        array (
+          'name' => 'url',
+          'label' => 'URL',
+          'type' => 'url',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_c3c329c859ae1794',
+        ),
+      ),
+      'layout' => 'table',
+      'key' => 'field_bl_2648de23f4e7c03b',
+    ),
+    6 => 
+    array (
+      'name' => 'branches',
+      'label' => 'Branches',
+      'type' => 'repeater',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'name',
+          'label' => 'Branch name',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_94e456e67100e1b4',
+        ),
+        1 => 
+        array (
+          'name' => 'address',
+          'label' => 'Address',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_f37ac3aca0d0d11f',
+        ),
+        2 => 
+        array (
+          'name' => 'phone',
+          'label' => 'Phone',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_d3f4adb7797b3f96',
+        ),
+        3 => 
+        array (
+          'name' => 'email',
+          'label' => 'Email',
+          'type' => 'email',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_5178f1d95c0915b3',
+        ),
+        4 => 
+        array (
+          'name' => 'map_link',
+          'label' => 'Map link',
+          'type' => 'url',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_faa0e12efbc8345d',
+        ),
+        5 => 
+        array (
+          'name' => 'country',
+          'label' => 'Country',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_9df02313c32f4da6',
+        ),
+        6 => 
+        array (
+          'name' => 'flag',
+          'label' => 'Country flag',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_a3b52da1938c9b49',
+        ),
+        7 => 
+        array (
+          'name' => 'tag',
+          'label' => 'Badge',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_c6e3b2ccf8d682f4',
+        ),
+        8 => 
+        array (
+          'name' => 'map_x',
+          'label' => 'Map horizontal position (%)',
+          'type' => 'number',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'min' => 0,
+          'max' => 100,
+          'step' => 0.1,
+          'key' => 'field_bl_b7cfa526eb6b2e26',
+        ),
+        9 => 
+        array (
+          'name' => 'map_y',
+          'label' => 'Map vertical position (%)',
+          'type' => 'number',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'min' => 0,
+          'max' => 100,
+          'step' => 0.1,
+          'key' => 'field_bl_6c30a83e1ef5169a',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_0c8117a84e64ed7c',
+    ),
+    7 => 
+    array (
+      'name' => 'map_image',
+      'label' => 'Regional map',
+      'type' => 'image',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'return_format' => 'id',
+      'key' => 'field_bl_f545c9e9e3cf7358',
+    ),
+    8 => 
+    array (
+      'name' => 'cta',
+      'label' => 'CTA',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_4b2dc79d4abb3ef6',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_6629cfda7d8198a2',
+        ),
+        2 => 
+        array (
+          'name' => 'destination',
+          'label' => 'Destination',
+          'type' => 'link',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'array',
+          'key' => 'field_bl_27cab97284d42d62',
+        ),
+        3 => 
+        array (
+          'name' => 'btn_btn_primary',
+          'label' => 'Button label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_dad7125dba7f9a2a',
+        ),
+        4 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_c8ce30fe266d7c45',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_e0e6785ec660b2a7',
+    ),
+    9 => 
+    array (
+      'name' => 'footer',
+      'label' => 'Footer',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'description',
+          'label' => 'Footer description',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_c5f66c9c25dd9107',
+        ),
+        1 => 
+        array (
+          'name' => 'footer_heading',
+          'label' => 'Company menu heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_3c8b21d5fff66f19',
+        ),
+        2 => 
+        array (
+          'name' => 'footer_heading_2',
+          'label' => 'Offices menu heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_6099f37edc121354',
+        ),
+        3 => 
+        array (
+          'name' => 'label',
+          'label' => 'Copyright text',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_b19e44bb80c94742',
+        ),
+        4 => 
+        array (
+          'name' => 'label_2',
+          'label' => 'Website label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_d370f3c96ad1090a',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_8c87d8943088a392',
+    ),
+    10 => 
+    array (
+      'name' => 'form_services',
+      'label' => 'Form service choices',
+      'type' => 'repeater',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'label',
+          'label' => 'Service label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_88226da1390859bd',
+        ),
+      ),
+      'layout' => 'table',
+      'key' => 'field_bl_cd2001ef136a1461',
+    ),
+    11 => 
+    array (
+      'key' => 'field_bl_home_client_count',
+      'name' => 'home_client_count',
+      'label' => 'Clients shown on homepage',
+      'type' => 'number',
+      'min' => 1,
+      'max' => 1000,
+      'step' => 1,
+      'instructions' => 'Number of entries shown, following the shared list display order.',
+    ),
+    12 => 
+    array (
+      'key' => 'field_bl_home_team_count',
+      'name' => 'home_team_count',
+      'label' => 'Team members shown on homepage',
+      'type' => 'number',
+      'min' => 1,
+      'max' => 1000,
+      'step' => 1,
+      'instructions' => 'Number of entries shown, following the shared list display order.',
+    ),
+    13 => 
+    array (
+      'key' => 'field_bl_footer_contact_heading',
+      'name' => 'footer_contact_heading',
+      'label' => 'Contact column heading',
+      'type' => 'text',
+      'instructions' => 'Footer contact column label.',
+    ),
+  ),
+  'clients' => 
+  array (
+    0 => 
+    array (
+      'name' => 'clients',
+      'label' => 'Clients',
+      'type' => 'repeater',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'name',
+          'label' => 'Client name',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_89c86179ed2c7518',
+        ),
+        1 => 
+        array (
+          'name' => 'logo',
+          'label' => 'Logo',
+          'type' => 'image',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'id',
+          'key' => 'field_bl_aac7e322be51d68b',
+        ),
+        2 => 
+        array (
+          'name' => 'website',
+          'label' => 'Website',
+          'type' => 'url',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_379c94128e3bfd83',
+        ),
+      ),
+      'layout' => 'table',
+      'key' => 'field_bl_bc0137bbae90b311',
+    ),
+    1 => 
+    array (
+      'name' => 'home_summary',
+      'label' => 'Homepage summary',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_8f9fd45ecf35ad91',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_8d492d3e268160c4',
+        ),
+        2 => 
+        array (
+          'name' => 'destination',
+          'label' => 'Destination',
+          'type' => 'link',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'array',
+          'key' => 'field_bl_a9ef22f3c197764f',
+        ),
+        3 => 
+        array (
+          'name' => 'btn_btn_ghost',
+          'label' => 'Btn Btn-Ghost',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_b36085412de3c313',
+        ),
+        4 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_ab57f6d1c64fa8f1',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_d8024c0c5313f5bc',
+    ),
+    2 => 
+    array (
+      'name' => 'section_0',
+      'label' => 'Page introduction',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_243a43dfae6b7b3b',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_7fbe295249c33bb6',
+    ),
+    3 => 
+    array (
+      'name' => 'section_1',
+      'label' => 'Client directory',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_512fb1ea8f33c887',
+    ),
+    4 => 
+    array (
+      'key' => 'field_bl_meta_clients',
+      'name' => 'meta_description',
+      'label' => 'Search description',
+      'type' => 'textarea',
+      'rows' => 3,
+      'new_lines' => '',
+      'instructions' => 'Plain-text description for search engines.',
+    ),
+  ),
+  'testimonials' => 
+  array (
+    0 => 
+    array (
+      'name' => 'testimonials',
+      'label' => 'Testimonials',
+      'type' => 'repeater',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'quote',
+          'label' => 'Quote',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_7c5c30a74022daf3',
+        ),
+        1 => 
+        array (
+          'name' => 'author',
+          'label' => 'Author name',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_9dbe75c184d1452a',
+        ),
+        2 => 
+        array (
+          'name' => 'position',
+          'label' => 'Position',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_60b165b0af597763',
+        ),
+        3 => 
+        array (
+          'name' => 'company',
+          'label' => 'Company',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_0b1a0ebe29c2065a',
+        ),
+        4 => 
+        array (
+          'name' => 'photo',
+          'label' => 'Photo',
+          'type' => 'image',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'id',
+          'key' => 'field_bl_59cb030582e0ec60',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_f725c18d83cf1001',
+    ),
+  ),
+  'team_post' => 
+  array (
+    0 => 
+    array (
+      'name' => 'photo',
+      'label' => 'Photo',
+      'type' => 'image',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'return_format' => 'id',
+      'key' => 'field_bl_1b0107cf1ef068e4',
+    ),
+    1 => 
+    array (
+      'name' => 'position',
+      'label' => 'Position',
+      'type' => 'text',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'key' => 'field_bl_11efd1229ac44299',
+    ),
+    2 => 
+    array (
+      'name' => 'initials',
+      'label' => 'Initials (when no photo)',
+      'type' => 'text',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'key' => 'field_bl_d86fa163a9dd1d0c',
+    ),
+    3 => 
+    array (
+      'name' => 'branch',
+      'label' => 'Branch',
+      'type' => 'text',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'key' => 'field_bl_70bada928e62e234',
+    ),
+    4 => 
+    array (
+      'name' => 'biography',
+      'label' => 'Biography',
+      'type' => 'textarea',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'new_lines' => '',
+      'rows' => 3,
+      'key' => 'field_bl_a8addfd14cbabcbe',
+    ),
+    5 => 
+    array (
+      'name' => 'social_links',
+      'label' => 'Social links',
+      'type' => 'repeater',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'label',
+          'label' => 'Network',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_4f12646a2f5fda04',
+        ),
+        1 => 
+        array (
+          'name' => 'url',
+          'label' => 'URL',
+          'type' => 'url',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_6b6563b768055fcb',
+        ),
+      ),
+      'layout' => 'table',
+      'key' => 'field_bl_78fda293280c2672',
+    ),
+  ),
+  'home' => 
+  array (
+    0 => 
+    array (
+      'name' => 'hero_slides',
+      'label' => 'Hero slides',
+      'type' => 'repeater',
+      'instructions' => 'Drag slides to reorder. An image replaces the decorative dashboard when supplied.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_6c6363dd002afca5',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_ca1a3f1a3594ac69',
+        ),
+        2 => 
+        array (
+          'name' => 'button_label',
+          'label' => 'Primary button label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_d4687548f3a84988',
+        ),
+        3 => 
+        array (
+          'name' => 'button',
+          'label' => 'Primary destination',
+          'type' => 'link',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'array',
+          'key' => 'field_bl_96f198ca60758fda',
+        ),
+        4 => 
+        array (
+          'name' => 'secondary_label',
+          'label' => 'Secondary button label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_9ae479f14a045bb9',
+        ),
+        5 => 
+        array (
+          'name' => 'secondary',
+          'label' => 'Secondary destination',
+          'type' => 'link',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'array',
+          'key' => 'field_bl_d27c869662389c4a',
+        ),
+        6 => 
+        array (
+          'name' => 'image',
+          'label' => 'Image (replaces dashboard)',
+          'type' => 'image',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'id',
+          'key' => 'field_bl_7cb92a0a369362f6',
+        ),
+        7 => 
+        array (
+          'name' => 'dashboard_type',
+          'label' => 'Dashboard style',
+          'type' => 'select',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'choices' => 
+          array (
+            'financial' => 'Financial statement',
+            'growth' => 'Growth metrics',
+          ),
+          'key' => 'field_bl_60a52a8ac3312ea7',
+        ),
+        8 => 
+        array (
+          'name' => 'financial',
+          'label' => 'Financial dashboard',
+          'type' => 'group',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'aria_label',
+              'label' => 'Accessible label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_9bdd0366968181e5',
+            ),
+            1 => 
+            array (
+              'name' => 'pl_eyebrow',
+              'label' => 'Statement heading',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_bbc4e94daa9f33c3',
+            ),
+            2 => 
+            array (
+              'name' => 'pl_firm',
+              'label' => 'Company label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_f1ddb7a39658d7ae',
+            ),
+            3 => 
+            array (
+              'name' => 'pl_unit',
+              'label' => 'Units',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_902b9616432a102b',
+            ),
+            4 => 
+            array (
+              'name' => 'pl_mini_items',
+              'label' => 'Pl Mini Items',
+              'type' => 'repeater',
+              'instructions' => 'Add, remove, or drag rows to reorder.',
+              'sub_fields' => 
+              array (
+                0 => 
+                array (
+                  'name' => 'layout',
+                  'label' => 'Card style',
+                  'type' => 'select',
+                  'instructions' => 'Choose the existing visual arrangement for this row. Text remains separately editable.',
+                  'choices' => 
+                  array (
+                    1 => 'Style 1',
+                    2 => 'Style 2',
+                    3 => 'Style 3',
+                    4 => 'Style 4',
+                    5 => 'Style 5',
+                  ),
+                  'default_value' => '1',
+                  'key' => 'field_bl_806113aaa9a91d89',
+                ),
+                1 => 
+                array (
+                  'name' => 'statement_label',
+                  'label' => 'Statement Label',
+                  'type' => 'text',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_99bdd6294a393bcf',
+                ),
+                2 => 
+                array (
+                  'name' => 'data_target',
+                  'label' => 'Animated value',
+                  'type' => 'number',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_2e9346a613804c0a',
+                ),
+                3 => 
+                array (
+                  'name' => 'data_target_2',
+                  'label' => 'Data-Target',
+                  'type' => 'number',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_82dd0e015d60ebb7',
+                ),
+              ),
+              'layout' => 'block',
+              'button_label' => 'Add item',
+              'key' => 'field_bl_d737d3ad85d06104',
+            ),
+            5 => 
+            array (
+              'name' => 'label',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_28d0fd5b8ce035d1',
+            ),
+            6 => 
+            array (
+              'name' => 'data_target',
+              'label' => 'Animated value',
+              'type' => 'number',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_137349e01ca05d7b',
+            ),
+            7 => 
+            array (
+              'name' => 'label_2',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_c1512c2c52965410',
+            ),
+            8 => 
+            array (
+              'name' => 'data_target_2',
+              'label' => 'Data-Target',
+              'type' => 'number',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_1efd4259d1cea1cd',
+            ),
+            9 => 
+            array (
+              'name' => 'icon',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_d94aa647d2872d84',
+            ),
+            10 => 
+            array (
+              'name' => 'label_3',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_b59134a915418a6d',
+            ),
+          ),
+          'layout' => 'block',
+          'key' => 'field_bl_f380eca80c439b99',
+        ),
+        9 => 
+        array (
+          'name' => 'growth',
+          'label' => 'Growth dashboard',
+          'type' => 'group',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'aria_label',
+              'label' => 'Accessible label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_64aa6f2674033859',
+            ),
+            1 => 
+            array (
+              'name' => 'hero_dash_growth_grid_items',
+              'label' => 'Hero Dash Growth Grid Items',
+              'type' => 'repeater',
+              'instructions' => 'Add, remove, or drag rows to reorder.',
+              'sub_fields' => 
+              array (
+                0 => 
+                array (
+                  'name' => 'layout',
+                  'label' => 'Card style',
+                  'type' => 'select',
+                  'instructions' => 'Choose the existing visual arrangement for this row. Text remains separately editable.',
+                  'choices' => 
+                  array (
+                    1 => 'Style 1',
+                    2 => 'Style 2',
+                    3 => 'Style 3',
+                    4 => 'Style 4',
+                  ),
+                  'default_value' => '1',
+                  'key' => 'field_bl_5e331dbd6614f547',
+                ),
+                1 => 
+                array (
+                  'name' => 'gg_label',
+                  'label' => 'Gg-Label',
+                  'type' => 'text',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_14b2bc09037294ca',
+                ),
+                2 => 
+                array (
+                  'name' => 'data_target',
+                  'label' => 'Animated value',
+                  'type' => 'number',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_5bc71c41c994f967',
+                ),
+                3 => 
+                array (
+                  'name' => 'gg_val',
+                  'label' => 'Gg-Val',
+                  'type' => 'text',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_f27a6766514004b6',
+                ),
+                4 => 
+                array (
+                  'name' => 'data_target_2',
+                  'label' => 'Data-Target',
+                  'type' => 'number',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_99085a34ea1e954d',
+                ),
+                5 => 
+                array (
+                  'name' => 'gg_unit',
+                  'label' => 'Gg-Unit',
+                  'type' => 'text',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_3b8d908dfb193438',
+                ),
+                6 => 
+                array (
+                  'name' => 'gg_delta_up',
+                  'label' => 'Gg-Delta Up',
+                  'type' => 'text',
+                  'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+                  'key' => 'field_bl_00b0125bf73daa25',
+                ),
+              ),
+              'layout' => 'block',
+              'button_label' => 'Add item',
+              'key' => 'field_bl_72945d40defc01fa',
+            ),
+          ),
+          'layout' => 'block',
+          'key' => 'field_bl_9447ec2ff5a64f3a',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_380dcbd79b82ab9e',
+    ),
+    1 => 
+    array (
+      'name' => 'section_1',
+      'label' => 'Statistics',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'stats_grid_items',
+          'label' => 'Stats Grid Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'layout',
+              'label' => 'Card style',
+              'type' => 'select',
+              'instructions' => 'Choose the existing visual arrangement for this row. Text remains separately editable.',
+              'choices' => 
+              array (
+                1 => 'Style 1',
+                2 => 'Style 2',
+                3 => 'Style 3',
+              ),
+              'default_value' => '1',
+              'key' => 'field_bl_5f7f4226d2a0e463',
+            ),
+            1 => 
+            array (
+              'name' => 'data_count',
+              'label' => 'Counter value',
+              'type' => 'number',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_e585f4fe1395c4dd',
+            ),
+            2 => 
+            array (
+              'name' => 'stat_label',
+              'label' => 'Stat-Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_0d3565eb0ed8d465',
+            ),
+            3 => 
+            array (
+              'name' => 'stat_sub',
+              'label' => 'Stat-Sub',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_2b1495b8bc4fe163',
+            ),
+            4 => 
+            array (
+              'name' => 'stat_num_stat_num_text',
+              'label' => 'Stat-Num Stat-Num-Text',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_c2c7cf9d3d755fe2',
+            ),
+            5 => 
+            array (
+              'name' => 'stat_num',
+              'label' => 'Stat-Num',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_84518c253caa85ca',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_5a73b77364e9baac',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_85bca383a3b56c96',
+    ),
+    2 => 
+    array (
+      'name' => 'section_2',
+      'label' => 'Why choose us',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_bbe978179d7606e0',
+        ),
+        1 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_b0d18f94e14e68fc',
+        ),
+        2 => 
+        array (
+          'name' => 'lead',
+          'label' => 'Lead',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_70d90665259ae3b3',
+        ),
+        3 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_ee3ce32ba9d3b9bb',
+        ),
+        4 => 
+        array (
+          'name' => 'why_list_reveal_items',
+          'label' => 'Why List Reveal Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'icon',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_2abe06a8813fc13c',
+            ),
+            1 => 
+            array (
+              'name' => 'label',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_66728de1e059c56c',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_e1f6066e15307394',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_15171fa9a47c308a',
+    ),
+    3 => 
+    array (
+      'name' => 'source_about',
+      'label' => 'Source page: About',
+      'type' => 'post_object',
+      'instructions' => 'Content is read from this page’s Homepage summary tab; links use its permalink.',
+      'post_type' => 
+      array (
+        0 => 'page',
+      ),
+      'allow_null' => 1,
+      'return_format' => 'id',
+      'key' => 'field_bl_5e62e2b7f0ce4909',
+    ),
+    4 => 
+    array (
+      'name' => 'section_4',
+      'label' => 'Team',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_e0703a93e6ed459d',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_239b452a4f4d47b0',
+        ),
+        2 => 
+        array (
+          'name' => 'destination',
+          'label' => 'Destination',
+          'type' => 'link',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'array',
+          'key' => 'field_bl_5ddf9ac62a410f62',
+        ),
+        3 => 
+        array (
+          'name' => 'btn_btn_ghost',
+          'label' => 'Btn Btn-Ghost',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_68565093de5857ea',
+        ),
+        4 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_368ff3ed4feb010e',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_9dc6c1c78721aa75',
+    ),
+    5 => 
+    array (
+      'name' => 'source_services',
+      'label' => 'Source page: Services',
+      'type' => 'post_object',
+      'instructions' => 'Content is read from this page’s Homepage summary tab; links use its permalink.',
+      'post_type' => 
+      array (
+        0 => 'page',
+      ),
+      'allow_null' => 1,
+      'return_format' => 'id',
+      'key' => 'field_bl_80700fb9622b5d66',
+    ),
+    6 => 
+    array (
+      'name' => 'source_clients',
+      'label' => 'Source page: Clients',
+      'type' => 'post_object',
+      'instructions' => 'Content is read from this page’s Homepage summary tab; links use its permalink.',
+      'post_type' => 
+      array (
+        0 => 'page',
+      ),
+      'allow_null' => 1,
+      'return_format' => 'id',
+      'key' => 'field_bl_a92f131413aa3d58',
+    ),
+    7 => 
+    array (
+      'name' => 'source_industries',
+      'label' => 'Source page: Industries',
+      'type' => 'post_object',
+      'instructions' => 'Content is read from this page’s Homepage summary tab; links use its permalink.',
+      'post_type' => 
+      array (
+        0 => 'page',
+      ),
+      'allow_null' => 1,
+      'return_format' => 'id',
+      'key' => 'field_bl_4d43b3fec851ba43',
+    ),
+    8 => 
+    array (
+      'name' => 'section_8',
+      'label' => 'Branches',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_bb2367b1d2cc3569',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_2d931d1536033cf0',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_df4bd94c5940a66a',
+    ),
+    9 => 
+    array (
+      'name' => 'section_9',
+      'label' => 'Testimonials',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_54397b2701c5435e',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_02223f514dd04517',
+    ),
+    10 => 
+    array (
+      'key' => 'field_bl_meta_home',
+      'name' => 'meta_description',
+      'label' => 'Search description',
+      'type' => 'textarea',
+      'rows' => 3,
+      'new_lines' => '',
+      'instructions' => 'Plain-text description for search engines.',
+    ),
+  ),
+  'about' => 
+  array (
+    0 => 
+    array (
+      'name' => 'home_summary',
+      'label' => 'Homepage summary',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'image',
+          'label' => 'Image',
+          'type' => 'image',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'id',
+          'key' => 'field_bl_955819230ee5be5d',
+        ),
+        1 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_2a14fd8558202d7e',
+        ),
+        2 => 
+        array (
+          'name' => 'strong',
+          'label' => 'Strong',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_427f58a7ae957111',
+        ),
+        3 => 
+        array (
+          'name' => 'label',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_ef3969ac5b9a9010',
+        ),
+        4 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_f89f19537c6741d8',
+        ),
+        5 => 
+        array (
+          'name' => 'lead',
+          'label' => 'Lead',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_e340f4edc042a990',
+        ),
+        6 => 
+        array (
+          'name' => 'features_stacked_items',
+          'label' => 'Features Stacked Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'icon',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_817ae6064c5aa6c7',
+            ),
+            1 => 
+            array (
+              'name' => 'label',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_7fb4095602393133',
+            ),
+            2 => 
+            array (
+              'name' => 'description',
+              'label' => 'Description',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_62a19e0ceb2b84d9',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_793b3e10c80cb9b1',
+        ),
+        7 => 
+        array (
+          'name' => 'destination',
+          'label' => 'Destination',
+          'type' => 'link',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'array',
+          'key' => 'field_bl_d6b24045046e3b4a',
+        ),
+        8 => 
+        array (
+          'name' => 'btn_arrow',
+          'label' => 'Link label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_68a1f21c7ead8408',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_ac00867d9cd79c19',
+    ),
+    1 => 
+    array (
+      'name' => 'section_0',
+      'label' => 'Page introduction',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_60647cfe1dce9f0c',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_8823e0b1c1076800',
+    ),
+    2 => 
+    array (
+      'name' => 'section_1',
+      'label' => 'Our approach',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_21d43b3ffb8fad5a',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_910ac056fdf06130',
+        ),
+        2 => 
+        array (
+          'name' => 'description_2',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_914e4f0e35a651ee',
+        ),
+        3 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_0c7383dc26ecffa8',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_e59a24655ccc86ad',
+    ),
+    3 => 
+    array (
+      'name' => 'section_2',
+      'label' => 'Our values',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_aa34da2c3e92cfc0',
+        ),
+        1 => 
+        array (
+          'name' => 'feature_list_items',
+          'label' => 'Feature List Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'label',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_b5581f3e128089c1',
+            ),
+            1 => 
+            array (
+              'name' => 'description',
+              'label' => 'Description',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_05c25598b9012352',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_3a32b0ca2599325f',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_8ce4fb32698ee0a3',
+    ),
+    4 => 
+    array (
+      'name' => 'section_3',
+      'label' => 'Target market',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_4c2728139c569c4f',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_ac8c7789d1ab113d',
+        ),
+        2 => 
+        array (
+          'name' => 'targets_items',
+          'label' => 'Targets Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'icon',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_ed05c1e0d4357aa1',
+            ),
+            1 => 
+            array (
+              'name' => 'label',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_355b928d12c399b1',
+            ),
+            2 => 
+            array (
+              'name' => 'description',
+              'label' => 'Description',
+              'type' => 'textarea',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'new_lines' => '',
+              'rows' => 3,
+              'key' => 'field_bl_34936a9feab27230',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_981ecf957e307abf',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_118a346ef1b6768c',
+    ),
+    5 => 
+    array (
+      'key' => 'field_bl_meta_about',
+      'name' => 'meta_description',
+      'label' => 'Search description',
+      'type' => 'textarea',
+      'rows' => 3,
+      'new_lines' => '',
+      'instructions' => 'Plain-text description for search engines.',
+    ),
+  ),
+  'services' => 
+  array (
+    0 => 
+    array (
+      'name' => 'home_summary',
+      'label' => 'Homepage summary',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_8eccac323f9ef5b9',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_84d74f5bbdbbedea',
+        ),
+        2 => 
+        array (
+          'name' => 'bento_items',
+          'label' => 'Bento Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'layout',
+              'label' => 'Card style',
+              'type' => 'select',
+              'instructions' => 'Choose the existing visual arrangement for this row. Text remains separately editable.',
+              'choices' => 
+              array (
+                1 => 'Style 1',
+                2 => 'Style 2',
+              ),
+              'default_value' => '1',
+              'key' => 'field_bl_4efdb50dab07b7c9',
+            ),
+            1 => 
+            array (
+              'name' => 'icon',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_4273bb3c220a8e38',
+            ),
+            2 => 
+            array (
+              'name' => 'card_title',
+              'label' => 'Card Title',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_ce21223afafb6d0d',
+            ),
+            3 => 
+            array (
+              'name' => 'description',
+              'label' => 'Description',
+              'type' => 'textarea',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'new_lines' => '',
+              'rows' => 3,
+              'key' => 'field_bl_4fc0aa61f7890d4d',
+            ),
+            4 => 
+            array (
+              'name' => 'destination',
+              'label' => 'Destination',
+              'type' => 'link',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'return_format' => 'array',
+              'key' => 'field_bl_a0c31c4b4551cf79',
+            ),
+            5 => 
+            array (
+              'name' => 'bento_cta',
+              'label' => 'Button label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_bf64286a2275f5cf',
+            ),
+            6 => 
+            array (
+              'name' => 'icon_2',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_b8b17eeb2958d1ee',
+            ),
+            7 => 
+            array (
+              'name' => 'bento_meta',
+              'label' => 'Badge',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_6ab60403f6bb7778',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_43f2a1f254b7b032',
+        ),
+        3 => 
+        array (
+          'name' => 'destination',
+          'label' => 'Destination',
+          'type' => 'link',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'return_format' => 'array',
+          'key' => 'field_bl_6b21a063d7e9862c',
+        ),
+        4 => 
+        array (
+          'name' => 'btn_btn_ghost',
+          'label' => 'Btn Btn-Ghost',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_c5b3e140462c5636',
+        ),
+        5 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_8d6bf305116bde66',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_bd5af88819db4626',
+    ),
+    1 => 
+    array (
+      'name' => 'section_0',
+      'label' => 'Page introduction',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_41976e9798d33ba4',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_b3c8231b4b77f291',
+    ),
+    2 => 
+    array (
+      'name' => 'section_1',
+      'label' => 'Services',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'grid_items',
+          'label' => 'Grid Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'icon',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_09cded81b1a253df',
+            ),
+            1 => 
+            array (
+              'name' => 'card_title',
+              'label' => 'Card Title',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_2acd0cd0161e959f',
+            ),
+            2 => 
+            array (
+              'name' => 'description',
+              'label' => 'Description',
+              'type' => 'textarea',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'new_lines' => '',
+              'rows' => 3,
+              'key' => 'field_bl_d1ee658c232cd23a',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_3be83aba087f4185',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_ac43e740fc6ea50d',
+    ),
+    3 => 
+    array (
+      'name' => 'section_2',
+      'label' => 'Our process',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_0c1c98a4f9c3b50e',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_e70d657cbf62a2f4',
+        ),
+        2 => 
+        array (
+          'name' => 'process_flow_items',
+          'label' => 'Process Flow Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'process_num',
+              'label' => 'Process-Num',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_537fee204bf82408',
+            ),
+            1 => 
+            array (
+              'name' => 'card_title',
+              'label' => 'Card Title',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_a88f94227e1d74e2',
+            ),
+            2 => 
+            array (
+              'name' => 'description',
+              'label' => 'Description',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_d022b06c5f823080',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_cdc639dc91fd7015',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_d76fb9beeeb9180c',
+    ),
+    4 => 
+    array (
+      'key' => 'field_bl_meta_services',
+      'name' => 'meta_description',
+      'label' => 'Search description',
+      'type' => 'textarea',
+      'rows' => 3,
+      'new_lines' => '',
+      'instructions' => 'Plain-text description for search engines.',
+    ),
+  ),
+  'industries' => 
+  array (
+    0 => 
+    array (
+      'name' => 'home_summary',
+      'label' => 'Homepage summary',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'heading',
+          'label' => 'Heading',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_f6e2e37368f87717',
+        ),
+        1 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_599a86eeef4911cd',
+        ),
+        2 => 
+        array (
+          'name' => 'industries_grid_items',
+          'label' => 'Industries Grid Items',
+          'type' => 'repeater',
+          'instructions' => 'Add, remove, or drag rows to reorder.',
+          'sub_fields' => 
+          array (
+            0 => 
+            array (
+              'name' => 'icon',
+              'label' => 'Icon',
+              'type' => 'select',
+              'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+              'choices' => 
+              array (
+                'icon_336d2d6923' => 'Book Your Free Consultation Today',
+                'icon_b252bb5ecd' => 'Decorative icon 2',
+                'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+                'icon_bdf01293ae' => 'Decorative icon 4',
+                'icon_aa0193e6f8' => 'Decorative icon 5',
+                'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+                'icon_853a788ebe' => 'Accounting & Financial Reporting',
+                'icon_69a986fdf0' => 'Client Commitment',
+                'icon_04ab93029c' => 'Financial Advisory Services',
+                'icon_f46faa2321' => 'Financial Advisory Services',
+                'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+                'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+                'icon_184a39935e' => 'Corporate Services & Market Entry',
+                'icon_82149895b0' => 'Decorative icon 14',
+                'icon_84e83c9eb8' => 'Decorative icon 15',
+                'icon_5038316e34' => 'Decorative icon 16',
+                'icon_e2cf4dd2c2' => 'Decorative icon 17',
+                'icon_3025eae594' => 'Decorative icon 18',
+                'icon_7e81688d8c' => 'Decorative icon 19',
+                'icon_f2f1aac15d' => 'Decorative icon 20',
+                'icon_77054719e7' => 'Decorative icon 21',
+                'icon_c900503c64' => 'Decorative icon 22',
+                'icon_de23c2e480' => 'Decorative icon 23',
+                'icon_ce063c2e26' => 'Decorative icon 24',
+                'icon_9320d4566f' => 'Decorative icon 25',
+                'icon_d8217e0c7b' => 'Our Approach',
+                'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+                'icon_1de9b851e7' => 'Entrepreneurs',
+                'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+                'icon_301cf37c45' => 'Tax Review & Consultancy',
+                'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+                'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+                'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+              ),
+              'key' => 'field_bl_550fbf08d9682d5e',
+            ),
+            1 => 
+            array (
+              'name' => 'label',
+              'label' => 'Label',
+              'type' => 'text',
+              'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+              'key' => 'field_bl_bc49fb8242b4e819',
+            ),
+          ),
+          'layout' => 'block',
+          'button_label' => 'Add item',
+          'key' => 'field_bl_7e45e7f152ec1534',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_7deaa5100ce2d3ba',
+    ),
+  ),
+  'team' => 
+  array (
+    0 => 
+    array (
+      'name' => 'section_0',
+      'label' => 'Page introduction',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_d510e9000bceaa19',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_b69ffcc4f6b922f5',
+    ),
+    1 => 
+    array (
+      'name' => 'section_1',
+      'label' => 'Team directory',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_1081985cc5e6e34f',
+    ),
+    2 => 
+    array (
+      'key' => 'field_bl_meta_team',
+      'name' => 'meta_description',
+      'label' => 'Search description',
+      'type' => 'textarea',
+      'rows' => 3,
+      'new_lines' => '',
+      'instructions' => 'Plain-text description for search engines.',
+    ),
+  ),
+  'contact' => 
+  array (
+    0 => 
+    array (
+      'name' => 'section_0',
+      'label' => 'Page introduction',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'textarea',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'new_lines' => '',
+          'rows' => 3,
+          'key' => 'field_bl_1527cb1dbe1be658',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_9debf3b5529a1809',
+    ),
+    1 => 
+    array (
+      'name' => 'section_1',
+      'label' => 'Contact details and form',
+      'type' => 'group',
+      'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+      'sub_fields' => 
+      array (
+        0 => 
+        array (
+          'name' => 'label',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_b1a3abb2022e3cd6',
+        ),
+        1 => 
+        array (
+          'name' => 'label_2',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_032d2994acded171',
+        ),
+        2 => 
+        array (
+          'name' => 'label_3',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_518424252ee1f195',
+        ),
+        3 => 
+        array (
+          'name' => 'label_4',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_7b29e8b8f1e88547',
+        ),
+        4 => 
+        array (
+          'name' => 'card_title',
+          'label' => 'Card Title',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_f915eb6de69ed842',
+        ),
+        5 => 
+        array (
+          'name' => 'description',
+          'label' => 'Description',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_b5af3bde534f1a53',
+        ),
+        6 => 
+        array (
+          'name' => 'label_5',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_e4313aea8ab58ac0',
+        ),
+        7 => 
+        array (
+          'name' => 'label_6',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_8aef841196ee986a',
+        ),
+        8 => 
+        array (
+          'name' => 'label_7',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_50c03f3299803fd4',
+        ),
+        9 => 
+        array (
+          'name' => 'label_8',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_bd2565d43a4cdecb',
+        ),
+        10 => 
+        array (
+          'name' => 'label_9',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_6db76fd6a1eccf98',
+        ),
+        11 => 
+        array (
+          'name' => 'label_10',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_ff7b747e631d7e29',
+        ),
+        12 => 
+        array (
+          'name' => 'option',
+          'label' => 'Option',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_3ed617d28ff08e42',
+        ),
+        13 => 
+        array (
+          'name' => 'label_11',
+          'label' => 'Label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_e814f7ef558e25f8',
+        ),
+        14 => 
+        array (
+          'name' => 'placeholder',
+          'label' => 'Placeholder',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_83362b27c80e00fa',
+        ),
+        15 => 
+        array (
+          'name' => 'btn_btn_primary',
+          'label' => 'Button label',
+          'type' => 'text',
+          'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+          'key' => 'field_bl_8e570105dffd9334',
+        ),
+        16 => 
+        array (
+          'name' => 'icon',
+          'label' => 'Icon',
+          'type' => 'select',
+          'instructions' => 'Choose a built-in icon. SVG markup is kept in the theme.',
+          'choices' => 
+          array (
+            'icon_336d2d6923' => 'Book Your Free Consultation Today',
+            'icon_b252bb5ecd' => 'Decorative icon 2',
+            'icon_f770b8a941' => 'One Partner. Complete Business Solutions.',
+            'icon_bdf01293ae' => 'Decorative icon 4',
+            'icon_aa0193e6f8' => 'Decorative icon 5',
+            'icon_0f8ff823bd' => 'Internal, External Audit & Compliance Support',
+            'icon_853a788ebe' => 'Accounting & Financial Reporting',
+            'icon_69a986fdf0' => 'Client Commitment',
+            'icon_04ab93029c' => 'Financial Advisory Services',
+            'icon_f46faa2321' => 'Financial Advisory Services',
+            'icon_c5b4b7f989' => 'Tax Review & Consultancy',
+            'icon_4f862fbde8' => 'Family-Owned Businesses & Holdings',
+            'icon_184a39935e' => 'Corporate Services & Market Entry',
+            'icon_82149895b0' => 'Decorative icon 14',
+            'icon_84e83c9eb8' => 'Decorative icon 15',
+            'icon_5038316e34' => 'Decorative icon 16',
+            'icon_e2cf4dd2c2' => 'Decorative icon 17',
+            'icon_3025eae594' => 'Decorative icon 18',
+            'icon_7e81688d8c' => 'Decorative icon 19',
+            'icon_f2f1aac15d' => 'Decorative icon 20',
+            'icon_77054719e7' => 'Decorative icon 21',
+            'icon_c900503c64' => 'Decorative icon 22',
+            'icon_de23c2e480' => 'Decorative icon 23',
+            'icon_ce063c2e26' => 'Decorative icon 24',
+            'icon_9320d4566f' => 'Decorative icon 25',
+            'icon_d8217e0c7b' => 'Our Approach',
+            'icon_ae2f284338' => 'Small, Medium & Large Enterprises',
+            'icon_1de9b851e7' => 'Entrepreneurs',
+            'icon_3b75deca3d' => 'Accounting & Financial Reporting',
+            'icon_301cf37c45' => 'Tax Review & Consultancy',
+            'icon_0b82704703' => 'Internal, External Audit & Compliance Support',
+            'icon_9c0e52aef7' => 'HR, PRO/GRO & Management Consultancy',
+            'icon_9f5fca1988' => 'Corporate Services & Market Entry',
+          ),
+          'key' => 'field_bl_9620b2f16c80e377',
+        ),
+      ),
+      'layout' => 'block',
+      'key' => 'field_bl_85ac622034501eb6',
+    ),
+    2 => 
+    array (
+      'key' => 'field_bl_meta_contact',
+      'name' => 'meta_description',
+      'label' => 'Search description',
+      'type' => 'textarea',
+      'rows' => 3,
+      'new_lines' => '',
+      'instructions' => 'Plain-text description for search engines.',
+    ),
+  ),
+);

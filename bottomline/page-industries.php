@@ -1,0 +1,1 @@
+<?php /* Template Name: Industries */ get_header(); while (have_posts()): the_post(); get_template_part('template-parts/industries-home_summary', null, ['source' => get_the_ID()]); get_template_part('template-parts/cta'); endwhile; get_footer(); ?>

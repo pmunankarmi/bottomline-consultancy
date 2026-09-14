@@ -1,0 +1,13 @@
+PASS stable release detected
+PASS release and manifest fetched once
+PASS release cache prevents repeat network requests
+PASS native update response contains installable package
+PASS unrelated repositories ignored
+PASS foreign release safely rejected
+PASS missing release safely rejected
+PASS prerelease release safely rejected
+PASS mismatch release safely rejected
+PASS offline release safely rejected
+PASS theme has correct Update URI
+PASS anonymous user cannot manage updates
+Updater checks complete.

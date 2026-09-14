@@ -1,0 +1,29 @@
+name: Publish WordPress theme release
+on:
+  push:
+    tags:
+      - 'v*'
+permissions:
+  contents: write
+concurrency:
+  group: theme-release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and package theme
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: python3 scripts/package-release.py "$RELEASE_TAG"
+      - name: Publish installable assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" dist/bottomline.zip dist/bottomline-update.json --clobber
+          else
+            gh release create "$RELEASE_TAG" dist/bottomline.zip dist/bottomline-update.json --verify-tag --title "Bottom Line $RELEASE_TAG" --generate-notes
+          fi

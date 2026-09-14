@@ -1,0 +1,8 @@
+PASS adding hero slide changes slide count
+PASS slide controls follow repeater
+PASS reordered hero content rendered
+PASS new slide PHP content rendered
+PASS empty testimonials section hidden
+PASS empty branches section hidden
+PASS empty clients section hidden
+PASS empty CTA hidden despite decorative icon
