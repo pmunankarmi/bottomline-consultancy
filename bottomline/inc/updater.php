@@ -91,6 +91,7 @@ function bl_github_release( $force = false ) {
 				} else {
 					$release = array(
 						'version'      => $match[1],
+						'notes'        => is_string( $release['body'] ?? null ) ? $release['body'] : '',
 						'url'          => BL_UPDATE_REPOSITORY . '/releases/tag/' . rawurlencode( $tag ),
 						'package'      => $package,
 						'requires'     => $manifest['requires'],
@@ -122,6 +123,7 @@ add_filter(
 			array(
 				'id'    => BL_UPDATE_REPOSITORY,
 				'theme' => $stylesheet,
+				'url'   => bl_release_details_url(),
 			)
 		);
 	},
@@ -159,3 +161,56 @@ add_action(
 	10,
 	2,
 );
+
+/** Return the local URL used by WordPress's version-details dialog. */
+function bl_release_details_url() {
+	return admin_url( 'admin-post.php?action=bl_release_details' );
+}
+
+/** Repair cached update links from theme versions that pointed directly to GitHub. */
+function bl_local_update_details( $updates ) {
+	if ( ! is_object( $updates ) ) {
+		return $updates;
+	}
+	$stylesheet = get_template();
+	foreach ( array( 'response', 'no_update' ) as $group ) {
+		if ( isset( $updates->{$group}[ $stylesheet ] ) && is_array( $updates->{$group}[ $stylesheet ] ) ) {
+			$entry = $updates->{$group}[ $stylesheet ];
+			if ( ( $entry['id'] ?? '' ) === BL_UPDATE_REPOSITORY || str_starts_with( $entry['url'] ?? '', BL_UPDATE_REPOSITORY . '/releases/' ) ) {
+				$updates->{$group}[ $stylesheet ]['url'] = bl_release_details_url();
+			}
+		}
+	}
+	return $updates;
+}
+add_filter( 'site_transient_update_themes', 'bl_local_update_details' );
+
+/** Render escaped release information inside the local dialog. */
+function bl_render_release_details( $release ) {
+	echo '<main class="wrap"><h1>' . esc_html__( 'Bottom Line Consultancy — Version details', 'bottomline' ) . '</h1>';
+	if ( is_wp_error( $release ) ) {
+		echo '<p>' . esc_html( $release->get_error_message() ) . '</p>';
+	} else {
+		echo '<h2>' . esc_html( sprintf( __( 'Version %s', 'bottomline' ), $release['version'] ) ) . '</h2>';
+		echo '<p>' . esc_html( sprintf( __( 'Requires WordPress %1$s or later and PHP %2$s or later.', 'bottomline' ), $release['requires'], $release['requires_php'] ) ) . '</p>';
+		echo '<h2>' . esc_html__( 'Release notes', 'bottomline' ) . '</h2>';
+		echo '<div style="white-space:pre-wrap;overflow-wrap:anywhere">' . esc_html( $release['notes'] ?: __( 'No release notes were provided.', 'bottomline' ) ) . '</div>';
+	}
+	echo '<p><a href="' . esc_url( BL_UPDATE_REPOSITORY . '/releases' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Open releases on GitHub', 'bottomline' ) . '</a></p></main>';
+}
+
+/** Serve details on the same origin so the WordPress popup can display them. */
+function bl_release_details() {
+	if ( ! current_user_can( 'update_themes' ) ) {
+		wp_die( esc_html__( 'Access denied.', 'bottomline' ), '', array( 'response' => 403 ) );
+	}
+	$release = bl_github_release();
+	if ( is_array( $release ) && ! array_key_exists( 'notes', $release ) ) {
+		$release = bl_github_release( true );
+	}
+	iframe_header( __( 'Theme version details', 'bottomline' ) );
+	bl_render_release_details( $release );
+	iframe_footer();
+	exit;
+}
+add_action( 'admin_post_bl_release_details', 'bl_release_details' );

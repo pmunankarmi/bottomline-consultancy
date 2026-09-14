@@ -108,3 +108,7 @@ The contact page loads WordPress jQuery and the locally bundled jQuery Validatio
 ## Version 1.3.4 notification email
 
 The optional Form notification email setting receives contact details and a private admin link after a new entry is saved. Replies go to the validated visitor address. Blank or invalid recipients disable delivery. Duplicate submissions do not resend notifications. Submission details show the mail handoff result; acceptance by WordPress mail does not guarantee inbox delivery. Configure the host’s mail service or SMTP as needed. Tests intercept mail and verify recipient, content, reply address, failures, saved entries and duplicate suppression without sending external email.
+
+## Version 1.3.5 release details
+
+WordPress’s View version details dialog now uses a local, administrator-only view with version requirements and escaped release notes. GitHub opens separately in a new tab. Cached GitHub details URLs are repaired without changing package URLs. Tests cover the native update link, cached links, unrelated themes, escaped notes and offline feedback; the live details endpoint was verified in the browser.
