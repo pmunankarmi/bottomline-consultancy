@@ -1,1 +1,31 @@
-<?php $rows = bl_rows(bl_field('testimonials', 'option')); if (!$rows) { return; } ?><div class="testimonial-grid"><?php foreach ($rows as $row): if (empty($row['quote'])) { continue; } ?><div class="testimonial reveal"><p class="testimonial-quote"><?php echo bl_text($row['quote']); ?></p><?php bl_image($row['photo'] ?? 0, 'testimonial-photo'); ?><?php if (!empty($row['author'])): ?><p class="testimonial-author"><?php echo bl_text($row['author']); ?></p><?php endif; ?><p><?php echo bl_text(implode(' · ', array_filter([$row['position'] ?? '', $row['company'] ?? '']))); ?></p></div><?php endforeach; ?></div>
+<?php
+/**
+ * The shared testimonial list.
+ *
+ * @package Bottomline
+ */
+
+$rows = bl_rows( bl_field( 'testimonials', 'option' ) );
+if ( ! $rows ) {
+	return;
+}
+?>
+<div class="testimonial-grid">
+	<?php
+	foreach ( $rows as $row ) :
+		if ( empty( $row['quote'] ) ) {
+			continue;
+		}
+		?>
+		<div class="testimonial reveal">
+			<p class="testimonial-quote"><?php echo bl_text( $row['quote'] ); ?></p>
+			<?php
+			bl_image( $row['photo'] ?? 0, 'testimonial-photo' );
+			if ( ! empty( $row['author'] ) ) :
+				?>
+				<p class="testimonial-author"><?php echo bl_text( $row['author'] ); ?></p>
+			<?php endif; ?>
+			<p><?php echo bl_text( implode( ' · ', array_filter( array( $row['position'] ?? '', $row['company'] ?? '' ) ) ) ); ?></p>
+		</div>
+	<?php endforeach; ?>
+</div>

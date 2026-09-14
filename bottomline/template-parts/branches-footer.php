@@ -1,1 +1,0 @@
-<ul class="footer-list"><?php foreach (bl_rows(bl_field('branches', 'option')) as $branch): ?><li><a href="<?php echo esc_url($branch['map_link'] ?? ''); ?>" target="_blank" rel="noopener noreferrer"><?php echo bl_text($branch['name'] ?? ''); ?></a></li><?php endforeach; ?></ul>

@@ -1,9 +1,78 @@
-<?php $slides = bl_rows(bl_field('hero_slides')); if (!$slides) { return; } ?>
-<section class="hero hero-dash-bg"><div class="hero-bg-arcs" aria-hidden="true"><svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="heroGlow"><stop offset="0%" stop-color="#009A66" stop-opacity=".35"/><stop offset="100%" stop-color="#009A66" stop-opacity="0"/></radialGradient></defs><circle cx="640" cy="180" r="520" fill="url(#heroGlow)"/></svg></div>
-<div class="hero-slider" id="heroSlider" role="region" aria-roledescription="<?php esc_attr_e('carousel', 'bottomline'); ?>" aria-label="<?php esc_attr_e('Highlights', 'bottomline'); ?>"><div class="hero-track">
-<?php foreach ($slides as $index => $slide): ?><div class="hero-slide" data-slide="<?php echo (int) $index; ?>"><div class="container"><div class="hero-split"><div class="hero-content"><?php echo $index === 0 ? '<h1 class="hero-tagline">' : '<h2 class="hero-tagline">'; ?><?php echo bl_text($slide['heading'] ?? ''); ?><?php echo $index === 0 ? '</h1>' : '</h2>'; ?><p class="hero-sub"><?php echo bl_text($slide['description'] ?? ''); ?></p><div class="hero-cta">
-<?php if (!empty($slide['button_label']) && bl_link_url($slide['button'] ?? [])): ?><a class="btn btn-primary" href="<?php echo esc_url(bl_link_url($slide['button'])); ?>"><?php echo bl_text($slide['button_label']); ?><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><?php endif; ?>
-<?php if (!empty($slide['secondary_label']) && bl_link_url($slide['secondary'] ?? [])): ?><a class="btn btn-ghost btn-on-dark" href="<?php echo esc_url(bl_link_url($slide['secondary'])); ?>"><?php echo bl_text($slide['secondary_label']); ?></a><?php endif; ?></div></div>
-<?php if (!empty($slide['image'])): ?><div class="hero-dash"><?php bl_image($slide['image']); ?></div><?php else: $kind = ($slide['dashboard_type'] ?? '') === 'growth' ? 'growth' : 'financial'; get_template_part('template-parts/hero-' . $kind, null, ['data' => $slide[$kind] ?? []]); endif; ?>
-</div></div></div><?php endforeach; ?></div>
-<?php if (count($slides) > 1): ?><div class="hero-controls"><button type="button" class="hero-nav hero-prev" aria-label="<?php esc_attr_e('Previous slide', 'bottomline'); ?>">←</button><div class="hero-dots"><?php foreach ($slides as $index => $slide): ?><button type="button" class="hero-dot" data-target="<?php echo (int) $index; ?>" aria-label="<?php echo esc_attr(sprintf(__('Show slide %d', 'bottomline'), $index + 1)); ?>"></button><?php endforeach; ?></div><button type="button" class="hero-nav hero-next" aria-label="<?php esc_attr_e('Next slide', 'bottomline'); ?>">→</button><button type="button" class="hero-pause" aria-pressed="false" aria-label="<?php esc_attr_e('Pause automatic slides', 'bottomline'); ?>">Ⅱ</button></div><?php endif; ?></div></section>
+<?php
+/**
+ * The homepage hero carousel.
+ *
+ * @package Bottomline
+ */
+
+$slides = bl_rows( bl_field( 'hero_slides' ) );
+if ( ! $slides ) {
+	return;
+}
+?>
+<section class="hero hero-dash-bg">
+	<div class="hero-bg-arcs" aria-hidden="true">
+		<svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
+			<defs>
+				<radialGradient id="heroGlow">
+					<stop offset="0%" stop-color="#009A66" stop-opacity=".35"/>
+					<stop offset="100%" stop-color="#009A66" stop-opacity="0"/>
+				</radialGradient>
+			</defs>
+			<circle cx="640" cy="180" r="520" fill="url(#heroGlow)"/>
+		</svg>
+	</div>
+	<div class="hero-slider" id="heroSlider" role="region" aria-roledescription="<?php esc_attr_e( 'carousel', 'bottomline' ); ?>" aria-label="<?php esc_attr_e( 'Highlights', 'bottomline' ); ?>">
+		<div class="hero-track">
+			<?php foreach ( $slides as $index => $slide ) : ?>
+				<div class="hero-slide" data-slide="<?php echo (int) $index; ?>">
+					<div class="container">
+						<div class="hero-split">
+							<div class="hero-content">
+								<?php if ( $index === 0 ) : ?>
+									<h1 class="hero-tagline"><?php echo bl_text( $slide['heading'] ?? '' ); ?></h1>
+								<?php else : ?>
+								<h2 class="hero-tagline"><?php echo bl_text( $slide['heading'] ?? '' ); ?></h2>
+								<?php endif; ?>
+							<p class="hero-sub"><?php echo bl_text( $slide['description'] ?? '' ); ?></p>
+							<div class="hero-cta">
+								<?php if ( ! empty( $slide['button_label'] ) && bl_link_url( $slide['button'] ?? array() ) ) : ?>
+									<a class="btn btn-primary" href="<?php echo esc_url( bl_link_url( $slide['button'] ) ); ?>">
+										<?php echo bl_text( $slide['button_label'] ); ?>
+										<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M5 12h14M13 5l7 7-7 7"/>
+										</svg>
+									</a>
+								<?php endif; ?>
+								<?php if ( ! empty( $slide['secondary_label'] ) && bl_link_url( $slide['secondary'] ?? array() ) ) : ?>
+									<a class="btn btn-ghost btn-on-dark" href="<?php echo esc_url( bl_link_url( $slide['secondary'] ) ); ?>"><?php echo bl_text( $slide['secondary_label'] ); ?></a>
+								<?php endif; ?>
+							</div>
+						</div>
+						<?php if ( ! empty( $slide['image'] ) ) : ?>
+							<div class="hero-dash"><?php bl_image( $slide['image'] ); ?></div>
+						<?php else : ?>
+							<?php
+							$kind = ( $slide['dashboard_type'] ?? '' ) === 'growth' ? 'growth' : 'financial';
+							get_template_part( 'template-parts/hero-' . $kind, null, array( 'data' => $slide[ $kind ] ?? array() ) );
+							?>
+						<?php endif; ?>
+					</div>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<?php if ( count( $slides ) > 1 ) : ?>
+			<div class="hero-controls">
+				<button type="button" class="hero-nav hero-prev" aria-label="<?php esc_attr_e( 'Previous slide', 'bottomline' ); ?>">←</button>
+				<div class="hero-dots">
+					<?php foreach ( $slides as $index => $slide ) : ?>
+						<button type="button" class="hero-dot" data-target="<?php echo (int) $index; ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Show slide %d', 'bottomline' ), $index + 1 ) ); ?>"></button>
+					<?php endforeach; ?>
+				</div>
+				<button type="button" class="hero-nav hero-next" aria-label="<?php esc_attr_e( 'Next slide', 'bottomline' ); ?>">→</button>
+				<button type="button" class="hero-pause" aria-pressed="false" aria-label="<?php esc_attr_e( 'Pause automatic slides', 'bottomline' ); ?>">Ⅱ</button>
+			</div>
+		<?php endif; ?>
+	</div>
+</section>

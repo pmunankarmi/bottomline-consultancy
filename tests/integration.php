@@ -30,7 +30,7 @@ check(bl_form_validate(array_merge($valid,['message'=>str_repeat('x',10001)]))['
 foreach(['=HYPERLINK("bad")','+cmd','-1+2','@SUM(A1)'," \t=1", "\xEF\xBB\xBF=1", "\n=2"] as $value) {check(str_starts_with(bl_csv_safe($value),"'"),'CSV formula neutralized');}
 $stream=fopen('php://temp','w+');$round=['Comma, value',"Two\nlines",'A "quote"'];fputcsv($stream,$round,',','"','');rewind($stream);check(fgetcsv($stream,null,',','"','')===$round,'CSV quoting round trip');fclose($stream);
 $about=bl_field('source_about',$home);$before=bl_field('home_summary',$about);$edited=$before;$edited['heading']='Administrator edited heading';update_field('home_summary',$edited,$about);
-ob_start();get_template_part('template-parts/about-home_summary',null,['source'=>$about]);$rendered=ob_get_clean();check(str_contains($rendered,'Administrator edited heading'),'source-page change updates PHP section');
+ob_start();get_template_part('template-parts/about-summary',null,['source'=>$about]);$rendered=ob_get_clean();check(str_contains($rendered,'Administrator edited heading'),'source-page change updates PHP section');
 $count_before=count(get_posts(['post_type'=>'attachment','posts_per_page'=>-1,'fields'=>'ids']));
 $phone=bl_field('phone','option');update_field('phone','','option');
 $clients=bl_field('clients','option');$edited_clients=array_reverse($clients);update_field('clients',$edited_clients,'option');

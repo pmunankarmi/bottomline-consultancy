@@ -1,1 +1,0 @@
-<?php foreach (bl_rows(bl_field('form_services', 'option')) as $service): ?><option value="<?php echo esc_attr($service['label'] ?? ''); ?>" <?php selected(bl_form_old('interest'), $service['label'] ?? ''); ?>><?php echo bl_text($service['label'] ?? ''); ?></option><?php endforeach; ?>

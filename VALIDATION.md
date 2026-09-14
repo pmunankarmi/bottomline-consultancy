@@ -47,3 +47,7 @@ The ZIP also contains decorative CSS for some unused earlier design variants; it
 - Cairo uses Google Fonts; map destinations are external links. Version 1.1 removes bundled content imagery; upload and assign it in the Media Library on new installations. Notifications by email are not implemented; successful submissions are stored in WordPress and visible to administrators.
 
 ACF Pro, WordPress core, the test database, user credentials and test submissions are not included in the installable theme package.
+
+## Version 1.3 template refactor
+
+Verified all six custom templates are registered by WordPress; old assignments resolve to their new files; assignment migration preserves all other page metadata (24 checks). The existing content integration (119), optional sections/slider (8), lightweight theme (10), updater (12), and authenticated HTTP/form/export (33) checks pass. All six custom pages also render without ACF. PHP syntax and JavaScript syntax are checked during packaging. Formatting follows WordPress spacing conventions; this is not a claim of full WPCS compliance.

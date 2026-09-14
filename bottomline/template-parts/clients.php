@@ -1,2 +1,36 @@
-<?php $clients = bl_rows(bl_field('clients', 'option')); if (!$clients) { return; } if (is_front_page()) { $clients = array_slice($clients, 0, max(1, absint(bl_field('home_client_count', 'option')))); } ?>
-<div class="clients-grid <?php echo is_front_page() ? '' : 'clients-full-color'; ?>"><?php foreach ($clients as $client): if (empty($client['logo'])) { continue; } ?><div class="client-tile"><?php if (!empty($client['website'])): ?><a href="<?php echo esc_url($client['website']); ?>" aria-label="<?php echo esc_attr($client['name'] ?? ''); ?>"><?php endif; ?><?php bl_image($client['logo'], '', $client['name'] ?? ''); ?><?php if (!empty($client['website'])): ?></a><?php endif; ?></div><?php endforeach; ?></div>
+<?php
+/**
+ * The shared client logo grid.
+ *
+ * @package Bottomline
+ */
+
+$clients = bl_rows( bl_field( 'clients', 'option' ) );
+if ( ! $clients ) {
+	return;
+}
+if ( is_front_page() ) {
+	$clients = array_slice( $clients, 0, max( 1, absint( bl_field( 'home_client_count', 'option' ) ) ) );
+}
+?>
+<div class="clients-grid <?php echo is_front_page() ? '' : 'clients-full-color'; ?>">
+	<?php
+	foreach ( $clients as $client ) :
+		if ( empty( $client['logo'] ) ) {
+			continue;
+		}
+		?>
+		<div class="client-tile">
+			<?php if ( ! empty( $client['website'] ) ) : ?>
+				<a href="<?php echo esc_url( $client['website'] ); ?>" aria-label="<?php echo esc_attr( $client['name'] ?? '' ); ?>">
+
+			<?php endif; ?>
+				<?php
+				bl_image( $client['logo'], '', $client['name'] ?? '' );
+				if ( ! empty( $client['website'] ) ) :
+					?>
+				</a>
+				<?php endif; ?>
+		</div>
+	<?php endforeach; ?>
+</div>

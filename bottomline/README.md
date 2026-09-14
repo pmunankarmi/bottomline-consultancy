@@ -10,7 +10,7 @@ Gutenberg is disabled for posts, pages, custom post types and widgets while this
 
 ## GitHub updates
 
-Install version 1.2.0 once to enable the updater. Go to **Appearance → Theme Updates → Check for updates**, then install available versions under **Dashboard → Updates** or **Appearance → Themes**. Stable GitHub releases are checked and cached for six hours; the manual button checks immediately. No access token or updater plugin is needed for this public repository. Theme updates replace theme files but do not rerun content import or overwrite saved ACF content. Use a child theme for custom PHP/CSS modifications.
+Install version 1.2.0 or later once to enable the updater. Go to **Appearance → Theme Updates → Check for updates**, then install available versions under **Dashboard → Updates** or **Appearance → Themes**. Stable GitHub releases are checked and cached for six hours; the manual button checks immediately. No access token or updater plugin is needed for this public repository. Theme updates replace theme files but do not rerun content import or overwrite saved ACF content. Use a child theme for custom PHP/CSS modifications.
 
 To publish a future version: update `bottomline/style.css` with a higher `Version`, commit and push the changes, then push the matching `vX.Y.Z` tag. The GitHub Actions workflow validates PHP/JavaScript, builds `bottomline.zip` and `bottomline-update.json`, and publishes the release. Tags and theme versions must match. Branch commits alone do not trigger WordPress updates. Keep the repository public and GitHub Actions enabled. The theme must be active (or the parent of an active child theme) for its updater code to run.
 
@@ -55,7 +55,7 @@ Shared homepage content is intentionally managed on source pages. Shorter homepa
 
 ## Architecture
 
-- Traditional `header.php`, `footer.php`, `front-page.php`, `page.php`, page-specific PHP templates, `archive-team.php`, `single-team.php`, and reusable template parts.
+- Traditional `header.php`, `footer.php`, `front-page.php`, `page.php`, six selectable templates in `page-templates/`, `archive-team.php`, `single-team.php`, and reusable template parts.
 - `inc/field-schema.php`: version-controlled PHP ACF definitions; registered on `acf/init`.
 - `inc/core.php`: theme support, menus, enqueues, Team CPT, safe rendering helpers and missing-dependency notice.
 - `inc/logo.php`: bidirectional attachment-ID synchronization, including removal and recursion protection.
@@ -88,3 +88,11 @@ Cairo is loaded from Google Fonts. Maps open the supplied external map links. PH
 ## API references
 
 Implementation follows the official [ACF PHP field registration documentation](https://www.advancedcustomfields.com/resources/register-fields-via-php/) and [ACF update-value filter documentation](https://www.advancedcustomfields.com/resources/acf-update_value/). WordPress Customizer saves use native theme modifications; see [Customizer save lifecycle](https://developer.wordpress.org/reference/hooks/customize_save_after/).
+
+## Template maintenance
+
+PHP and HTML ship as readable source, with WordPress file docblocks and descriptive loop variables. The six selectable templates are `page-templates/about.php`, `services.php`, `clients.php`, `team.php`, `contact.php`, and `industries.php`. WordPress hierarchy files stay at the theme root.
+
+The header uses native custom-logo, menu, document and body hooks. The footer renders its own logo, menu and contact details and calls `wp_footer()`. Fourteen substantial shared sections remain in `template-parts/`; page-only sections and small logo/menu/contact fragments are inline.
+
+Version 1.3 migrates previous page-template assignments on an administrator visit. Legacy assignments also resolve immediately on the frontend. This changes template paths only and preserves saved page and ACF content.
