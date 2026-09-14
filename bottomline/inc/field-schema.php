@@ -3,6 +3,21 @@
 return array(
 	'options'      => array(
 		array(
+			'name'         => 'form_sender_name',
+			'label'        => 'Notification sender name',
+			'type'         => 'text',
+			'maxlength'    => 100,
+			'instructions' => 'Name shown in the From field. Leave blank to use the WordPress mail default.',
+			'key'          => 'field_bl_form_sender_name',
+		),
+		array(
+			'name'         => 'form_sender_email',
+			'label'        => 'Notification sender email',
+			'type'         => 'email',
+			'instructions' => 'Use an address authorized by your mail provider, preferably on your website domain. Leave blank to use the WordPress mail default.',
+			'key'          => 'field_bl_form_sender_email',
+		),
+		array(
 			'name'         => 'form_notification_email',
 			'label'        => 'Form notification email',
 			'type'         => 'email',

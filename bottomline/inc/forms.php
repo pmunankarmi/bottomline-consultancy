@@ -431,7 +431,7 @@ add_action( 'wp_enqueue_scripts', 'bl_enqueue_contact_validation' );
  * Email the configured recipient after a contact submission is stored.
  *
  * Notification failures do not discard the saved message or prompt a duplicate
- * submission. WordPress controls the sender and mail transport.
+ * submission. Sender settings apply only to this notification.
  *
  * @param int $submission_id Saved contact submission ID.
  */
@@ -450,17 +450,34 @@ function bl_notify_contact_submission( $submission_id ) {
 	}
 	/* translators: %d is the stored submission ID. */
 	$subject = sprintf( __( 'New contact submission #%d', 'bottomline' ), $submission_id );
-	$lines   = array( $subject, '' );
-	foreach ( bl_form_columns() as $key => $label ) {
-		$lines[] = $label . ': ' . ( $values[ $key ] ?? '' );
-	}
-	$lines[] = '';
-	$lines[] = admin_url( 'admin.php?page=bl-submissions&submission=' . $submission_id );
-	$headers = array( 'Content-Type: text/plain; charset=UTF-8' );
+	$body    = bl_contact_notification_html( $submission_id, $values );
+	$headers = array( 'Content-Type: text/html; charset=UTF-8' );
 	if ( is_email( $values['email'] ?? '' ) ) {
 		$headers[] = 'Reply-To: ' . $values['email'];
 	}
 	update_post_meta( $submission_id, '_bl_notification_status', 'sending' );
-	$accepted = wp_mail( $recipient, $subject, implode( "\n", $lines ), $headers );
+	$sender_name  = sanitize_text_field( (string) bl_field( 'form_sender_name', 'option' ) );
+	$sender_email = bl_field( 'form_sender_email', 'option' );
+	$from_name    = static function ( $default ) use ( $sender_name ) {
+		return $sender_name !== '' ? $sender_name : $default;
+	};
+	$from_email   = static function ( $default ) use ( $sender_email ) {
+		return is_string( $sender_email ) && is_email( $sender_email ) ? $sender_email : $default;
+	};
+	add_filter( 'wp_mail_from_name', $from_name );
+	add_filter( 'wp_mail_from', $from_email );
+	try {
+		$accepted = wp_mail( $recipient, $subject, $body, $headers );
+	} finally {
+		remove_filter( 'wp_mail_from_name', $from_name );
+		remove_filter( 'wp_mail_from', $from_email );
+	}
 	update_post_meta( $submission_id, '_bl_notification_status', $accepted ? 'accepted' : 'failed' );
+}
+
+/** Build an HTML notification with escaped submission values. */
+function bl_contact_notification_html( $submission_id, $values ) {
+	ob_start();
+	require get_template_directory() . '/emails/contact-notification.php';
+	return ob_get_clean();
 }

@@ -71,3 +71,7 @@ The optional Form notification email setting receives contact details and a priv
 ## Version 1.3.5 release details
 
 WordPress’s View version details dialog now uses a local, administrator-only view with version requirements and escaped release notes. GitHub opens separately in a new tab. Cached GitHub details URLs are repaired without changing package URLs. Tests cover the native update link, cached links, unrelated themes, escaped notes and offline feedback; the live details endpoint was verified in the browser.
+
+## Version 1.3.6 styled notifications
+
+Theme Settings → Contact and Social includes Notification sender name and Notification sender email. Blank values retain WordPress mail defaults; SMTP plugins may enforce their configured sender. These overrides apply only to contact notifications. Emails use an escaped HTML template with inline styles, a green heading, submitted details, message panel and an admin button. Reply-To remains the visitor. Mocked delivery tests verify sender scope, HTML content, escaping, duplicate handling and failures. Layout was reviewed in the browser; actual inbox rendering depends on the email client.
