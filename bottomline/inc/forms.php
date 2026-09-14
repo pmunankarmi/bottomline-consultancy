@@ -396,3 +396,24 @@ function bl_export_submissions() {
 	exit();
 }
 add_action( 'admin_post_bl_export', 'bl_export_submissions' );
+
+/** Load client-side validation only on the contact page. */
+function bl_enqueue_contact_validation() {
+	if ( ! bl_uses_page_template( 'contact' ) ) {
+		return;
+	}
+	$uri = get_template_directory_uri();
+	wp_enqueue_script( 'bl-jquery-validate', $uri . '/assets/js/vendor/jquery.validate.js', array( 'jquery' ), '1.21.0', true );
+	wp_enqueue_script( 'bl-contact-validation', $uri . '/assets/js/contact-validation.js', array( 'bl-jquery-validate' ), wp_get_theme( get_template() )->get( 'Version' ), true );
+	wp_localize_script(
+		'bl-contact-validation',
+		'blContactValidation',
+		array(
+			'required'  => __( 'Please complete this field.', 'bottomline' ),
+			'email'     => __( 'Enter a valid email address.', 'bottomline' ),
+			/* translators: {0} is replaced by the maximum character count. */
+			'maxlength' => __( 'Please enter no more than {0} characters.', 'bottomline' ),
+		)
+	);
+}
+add_action( 'wp_enqueue_scripts', 'bl_enqueue_contact_validation' );

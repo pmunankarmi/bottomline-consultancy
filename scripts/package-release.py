@@ -21,7 +21,8 @@ if len(sys.argv) > 1 and sys.argv[1] != 'v' + version:
     raise SystemExit('Git tag does not match the theme Version header')
 for path in theme.rglob('*.php'):
     subprocess.run(['php', '-l', str(path)], check=True, stdout=subprocess.DEVNULL)
-subprocess.run(['node', '--check', str(theme / 'assets/js/main.js')], check=True)
+for path in (theme / 'assets/js').rglob('*.js'):
+    subprocess.run(['node', '--check', str(path)], check=True)
 dist = root / 'dist'
 dist.mkdir(exist_ok=True)
 with zipfile.ZipFile(dist / 'bottomline.zip', 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as archive:

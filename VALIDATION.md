@@ -59,3 +59,7 @@ Verified an administrator check populates the native WordPress update transient,
 ## Version 1.3.2 icon controls
 
 Verified all 16 icon dropdowns retain their choices and have paired image overrides. Nested repeater values render the image when selected and restore the built-in icon when removed. Confirmed image uploaders and SVG dropdown previews render in the Services editor. PHP and JavaScript syntax checks pass.
+
+## Version 1.3.3 contact validation
+
+Browser checks verified empty required fields, whitespace-only names, invalid email, first-error focus, ARIA error association, and successful valid submission. All 33 HTTP checks passed, including server-side rejection, storage and authenticated CSV export.

@@ -100,3 +100,7 @@ Version 1.3 migrates previous page-template assignments on an administrator visi
 ## Icon controls
 
 Each icon keeps its built-in dropdown with a live visual preview underneath. The adjacent optional image override uses the WordPress Media Library. An uploaded image takes priority; removing it restores the dropdown selection. This applies to card icons, button icons and editable decorative illustrations.
+
+## Contact validation
+
+The contact page loads WordPress jQuery and the locally bundled jQuery Validation plugin 1.21.0 (MIT). Required fields, email format and length limits show inline accessible feedback before the normal form POST. Company, phone and service remain optional. PHP validation and submission protections remain active, including when JavaScript is unavailable.

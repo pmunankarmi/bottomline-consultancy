@@ -5,3 +5,18 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 
 .hero-pause{position:absolute;bottom:12px;right:20px;color:#00553a;border-color:#00553a55;z-index:5}.hero-controls{display:contents}
+
+/* Contact form errors remain next to the fields they describe. */
+#contactForm .bl-field-error {
+    display: block;
+    margin-top: 6px;
+    color: #a32020;
+    font-size: 0.875rem;
+}
+#contactForm .bl-input-invalid {
+    border-color: #a32020;
+}
+#contactForm .bl-input-invalid:focus {
+    outline: 2px solid #a32020;
+    outline-offset: 2px;
+}
