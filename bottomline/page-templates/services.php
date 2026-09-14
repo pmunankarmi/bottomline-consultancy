@@ -28,7 +28,7 @@ while ( have_posts() ) :
 						}
 						?>
 						<article class="service-card reveal">
-							<div class="card-icon"><?php bl_icon( $service['icon'] ?? '' ); ?></div>
+							<div class="card-icon"><?php bl_icon( $service['icon'] ?? '', $service['icon_image'] ?? 0 ); ?></div>
 							<div class="service-card-body">
 								<h3><?php echo bl_text( $service['card_title'] ?? '' ); ?></h3>
 								<p><?php echo bl_text( $service['description'] ?? '' ); ?></p>

@@ -25,15 +25,15 @@ if ( ! bl_has_content( $data ) ) {
 				if ( ( $service['layout'] ?? '1' ) === '1' ) :
 					?>
 					<article class="bento-tile featured reveal">
-						<div class="card-icon"><?php bl_icon( $service['icon'] ?? '' ); ?></div>
+						<div class="card-icon"><?php bl_icon( $service['icon'] ?? '', $service['icon_image'] ?? 0 ); ?></div>
 						<h3><?php echo bl_text( $service['card_title'] ?? '' ); ?></h3>
 						<p><?php echo bl_text( $service['description'] ?? '' ); ?></p>
-						<a href="<?php echo esc_url( get_permalink( $args['source'] ) ); ?>" class="bento-cta"><?php echo bl_text( $service['bento_cta'] ?? '' ); ?><?php bl_icon( $service['icon_2'] ?? '' ); ?></a>
+						<a href="<?php echo esc_url( get_permalink( $args['source'] ) ); ?>" class="bento-cta"><?php echo bl_text( $service['bento_cta'] ?? '' ); ?><?php bl_icon( $service['icon_2'] ?? '', $service['icon_2_image'] ?? 0 ); ?></a>
 					</article>
 				<?php endif; ?>
 				<?php if ( ( $service['layout'] ?? '1' ) === '2' ) : ?>
 					<article class="bento-tile reveal">
-						<div class="card-icon"><?php bl_icon( $service['icon'] ?? '' ); ?></div>
+						<div class="card-icon"><?php bl_icon( $service['icon'] ?? '', $service['icon_image'] ?? 0 ); ?></div>
 						<h3><?php echo bl_text( $service['card_title'] ?? '' ); ?></h3>
 						<p><?php echo bl_text( $service['description'] ?? '' ); ?></p>
 						<span class="bento-meta"><?php echo bl_text( $service['bento_meta'] ?? '' ); ?></span>
@@ -44,7 +44,7 @@ if ( ! bl_has_content( $data ) ) {
 			<?php endforeach; ?>
 		</div>
 		<div style="text-align: center; margin-top: 36px;">
-			<a href="<?php echo esc_url( get_permalink( $args['source'] ) ); ?>" class="btn btn-ghost"><?php echo bl_text( $data['btn_btn_ghost'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '' ); ?></a>
+			<a href="<?php echo esc_url( get_permalink( $args['source'] ) ); ?>" class="btn btn-ghost"><?php echo bl_text( $data['btn_btn_ghost'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '', $data['icon_image'] ?? 0 ); ?></a>
 		</div>
 	</div>
 </section>

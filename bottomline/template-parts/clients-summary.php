@@ -21,7 +21,7 @@ if ( ! bl_has_content( $data ) ) {
 		</div>
 		<?php get_template_part( 'template-parts/clients' ); ?>
 		<div class="clients-cta">
-			<a href="<?php echo esc_url( get_permalink( $args['source'] ) ); ?>" class="btn btn-ghost"><?php echo bl_text( $data['btn_btn_ghost'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '' ); ?></a>
+			<a href="<?php echo esc_url( get_permalink( $args['source'] ) ); ?>" class="btn btn-ghost"><?php echo bl_text( $data['btn_btn_ghost'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '', $data['icon_image'] ?? 0 ); ?></a>
 		</div>
 	</div>
 </section>

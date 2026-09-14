@@ -26,7 +26,7 @@ while ( have_posts() ) :
 						<p><?php echo bl_text( $data['description'] ?? '' ); ?></p>
 						<p><?php echo bl_text( $data['description_2'] ?? '' ); ?></p>
 					</div>
-					<div class="split-visual reveal" aria-hidden="true"><?php bl_icon( $data['icon'] ?? '' ); ?></div>
+					<div class="split-visual reveal" aria-hidden="true"><?php bl_icon( $data['icon'] ?? '', $data['icon_image'] ?? 0 ); ?></div>
 				</div>
 			</div>
 		</section>
@@ -74,7 +74,7 @@ while ( have_posts() ) :
 						}
 						?>
 						<div class="target reveal">
-							<div class="target-icon"><?php bl_icon( $target['icon'] ?? '' ); ?></div>
+							<div class="target-icon"><?php bl_icon( $target['icon'] ?? '', $target['icon_image'] ?? 0 ); ?></div>
 							<h4><?php echo bl_text( $target['label'] ?? '' ); ?></h4>
 							<p style="font-size: 0.9375rem; color: var(--muted);"><?php echo bl_text( $target['description'] ?? '' ); ?></p>
 						</div>

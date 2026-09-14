@@ -111,7 +111,7 @@ $dashboard = $args['data'] ?? array();
 		</div>
 		<div class="pl-strip-sep"></div>
 		<div class="pl-strip-item pl-strip-spark">
-			<?php bl_icon( $dashboard['icon'] ?? '' ); ?>
+			<?php bl_icon( $dashboard['icon'] ?? '', $dashboard['icon_image'] ?? 0 ); ?>
 			<span><?php echo bl_text( $dashboard['label_3'] ?? '' ); ?></span>
 		</div>
 	</div>

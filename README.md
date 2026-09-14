@@ -96,3 +96,7 @@ PHP and HTML ship as readable source, with WordPress file docblocks and descript
 The header uses native custom-logo, menu, document and body hooks. The footer renders its own logo, menu and contact details and calls `wp_footer()`. Fourteen substantial shared sections remain in `template-parts/`; page-only sections and small logo/menu/contact fragments are inline.
 
 Version 1.3 migrates previous page-template assignments on an administrator visit. Legacy assignments also resolve immediately on the frontend. This changes template paths only and preserves saved page and ACF content.
+
+## Icon controls
+
+Each icon keeps its built-in dropdown with a live visual preview underneath. The adjacent optional image override uses the WordPress Media Library. An uploaded image takes priority; removing it restores the dropdown selection. This applies to card icons, button icons and editable decorative illustrations.

@@ -1,16 +1,27 @@
 <?php
 /**
- * Built-in decorative icons.
+ * Media Library icons and compatibility with previously saved icon choices.
  *
  * @package Bottomline
  */
 
 /**
- * Render an icon from the theme’s fixed SVG collection.
+ * Render a selected image, or a previously saved built-in icon.
  *
- * @param string $name Icon key saved in an ACF field.
+ * @param string $name  Built-in icon key.
+ * @param int    $image Optional image attachment override.
  */
-function bl_icon( $name ) {
+function bl_icon( $name, $image = 0 ) {
+	if ( $image && wp_attachment_is_image( absint( $image ) ) ) {
+		bl_image( $image, 'bl-icon-image', '' );
+		return;
+	}
+
+	if ( is_numeric( $name ) ) {
+		bl_image( $name, 'bl-icon-image', '' );
+		return;
+	}
+
 	switch ( $name ) {
 		case 'icon_336d2d6923':
 			?>
@@ -376,3 +387,31 @@ function bl_icon( $name ) {
 			break;
 	}
 }
+
+/** Load previews beside the built-in icon selectors in ACF. */
+function bl_enqueue_icon_previews() {
+	$schema  = require __DIR__ . '/field-schema.php';
+	$icons   = array();
+	$collect = function ( $fields ) use ( &$collect, &$icons ) {
+		foreach ( $fields as $field ) {
+			if ( in_array( $field['name'], array( 'icon', 'icon_2' ), true ) ) {
+				foreach ( $field['choices'] ?? array() as $key => $label ) {
+					if ( ! isset( $icons[ $key ] ) ) {
+						ob_start();
+						bl_icon( $key );
+						$icons[ $key ] = ob_get_clean();
+					}
+				}
+			}
+			$collect( $field['sub_fields'] ?? array() );
+		}
+	};
+	foreach ( $schema as $fields ) {
+		$collect( $fields );
+	}
+	$version = wp_get_theme( get_template() )->get( 'Version' );
+	wp_enqueue_script( 'bl-icon-previews', get_template_directory_uri() . '/assets/js/icon-previews.js', array( 'acf-input' ), $version, true );
+	wp_localize_script( 'bl-icon-previews', 'blIconPreviews', $icons );
+	wp_enqueue_style( 'bl-icon-previews', get_template_directory_uri() . '/assets/css/icon-previews.css', array(), $version );
+}
+add_action( 'acf/input/admin_enqueue_scripts', 'bl_enqueue_icon_previews' );

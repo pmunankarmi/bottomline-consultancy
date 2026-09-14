@@ -28,7 +28,7 @@ if ( ! bl_has_content( $data ) ) {
 				}
 				?>
 				<div class="industry-card">
-					<div class="industry-icon"><?php bl_icon( $industry['icon'] ?? '' ); ?></div>
+					<div class="industry-icon"><?php bl_icon( $industry['icon'] ?? '', $industry['icon_image'] ?? 0 ); ?></div>
 					<span><?php echo bl_text( $industry['label'] ?? '' ); ?></span>
 				</div>
 			<?php endforeach; ?>

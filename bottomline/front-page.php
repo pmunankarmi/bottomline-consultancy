@@ -61,7 +61,7 @@ while ( have_posts() ) :
 	if ( bl_has_content( $data ) ) :
 		?>
 		<section class="section why-choose">
-			<div class="why-arcs" aria-hidden="true"><?php bl_icon( $data['icon'] ?? '' ); ?></div>
+			<div class="why-arcs" aria-hidden="true"><?php bl_icon( $data['icon'] ?? '', $data['icon_image'] ?? 0 ); ?></div>
 			<div class="container">
 				<div class="why-grid">
 					<div class="why-intro reveal">
@@ -77,7 +77,7 @@ while ( have_posts() ) :
 							}
 							?>
 							<li class="why-item">
-								<span class="why-check" aria-hidden="true"><?php bl_icon( $reason['icon'] ?? '' ); ?></span>
+								<span class="why-check" aria-hidden="true"><?php bl_icon( $reason['icon'] ?? '', $reason['icon_image'] ?? 0 ); ?></span>
 								<span><?php echo bl_text( $reason['label'] ?? '' ); ?></span>
 							</li>
 						<?php endforeach; ?>
@@ -102,7 +102,7 @@ while ( have_posts() ) :
 				</div>
 				<?php get_template_part( 'template-parts/team-list' ); ?>
 				<div style="text-align: center; margin-top: 36px;">
-					<a href="<?php echo esc_url( bl_link_url( $data['destination'] ?? '' ) ); ?>" class="btn btn-ghost"><?php echo bl_text( $data['btn_btn_ghost'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '' ); ?></a>
+					<a href="<?php echo esc_url( bl_link_url( $data['destination'] ?? '' ) ); ?>" class="btn btn-ghost"><?php echo bl_text( $data['btn_btn_ghost'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '', $data['icon_image'] ?? 0 ); ?></a>
 				</div>
 			</div>
 		</section>

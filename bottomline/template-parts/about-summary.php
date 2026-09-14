@@ -16,7 +16,7 @@ if ( ! bl_has_content( $data ) ) {
 			<div class="image-side reveal">
 				<?php bl_image( $data['image'] ?? '', '' ); ?>
 				<div class="image-badge">
-					<div class="image-badge-icon"><?php bl_icon( $data['icon'] ?? '' ); ?></div>
+					<div class="image-badge-icon"><?php bl_icon( $data['icon'] ?? '', $data['icon_image'] ?? 0 ); ?></div>
 					<div class="image-badge-text">
 						<strong><?php echo bl_text( $data['strong'] ?? '' ); ?></strong>
 						<span><?php echo bl_text( $data['label'] ?? '' ); ?></span>
@@ -34,7 +34,7 @@ if ( ! bl_has_content( $data ) ) {
 						}
 						?>
 						<div class="feature">
-							<div class="feature-icon"><?php bl_icon( $feature['icon'] ?? '' ); ?></div>
+							<div class="feature-icon"><?php bl_icon( $feature['icon'] ?? '', $feature['icon_image'] ?? 0 ); ?></div>
 							<div class="feature-body">
 								<h4><?php echo bl_text( $feature['label'] ?? '' ); ?></h4>
 								<p><?php echo bl_text( $feature['description'] ?? '' ); ?></p>

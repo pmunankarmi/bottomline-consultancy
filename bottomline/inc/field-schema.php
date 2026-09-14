@@ -2,7 +2,7 @@
 /** Version-controlled ACF field definitions. */
 return array(
 	'options'      => array(
-		0  => array(
+		array(
 			'name'          => 'site_logo',
 			'label'         => 'Site logo',
 			'type'          => 'image',
@@ -11,7 +11,7 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_b0914776cd9ca07f',
 		),
-		1  => array(
+		array(
 			'name'          => 'footer_logo',
 			'label'         => 'Footer logo (reversed)',
 			'type'          => 'image',
@@ -19,41 +19,41 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_720697821ca120f8',
 		),
-		2  => array(
+		array(
 			'name'         => 'phone',
 			'label'        => 'Phone',
 			'type'         => 'text',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'key'          => 'field_bl_308acd8ba661cfd8',
 		),
-		3  => array(
+		array(
 			'name'         => 'email',
 			'label'        => 'Email',
 			'type'         => 'email',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'key'          => 'field_bl_80e0d1058fcaf57a',
 		),
-		4  => array(
+		array(
 			'name'         => 'website_label',
 			'label'        => 'Website label',
 			'type'         => 'text',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'key'          => 'field_bl_681f7b8c48b0cc4a',
 		),
-		5  => array(
+		array(
 			'name'         => 'social_links',
 			'label'        => 'Social links',
 			'type'         => 'repeater',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'label',
 					'label'        => 'Network',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_984fb8e76d3fc644',
 				),
-				1 => array(
+				array(
 					'name'         => 'url',
 					'label'        => 'URL',
 					'type'         => 'url',
@@ -64,20 +64,20 @@ return array(
 			'layout'       => 'table',
 			'key'          => 'field_bl_2648de23f4e7c03b',
 		),
-		6  => array(
+		array(
 			'name'         => 'branches',
 			'label'        => 'Branches',
 			'type'         => 'repeater',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'name',
 					'label'        => 'Branch name',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_94e456e67100e1b4',
 				),
-				1 => array(
+				array(
 					'name'         => 'address',
 					'label'        => 'Address',
 					'type'         => 'textarea',
@@ -86,49 +86,49 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_f37ac3aca0d0d11f',
 				),
-				2 => array(
+				array(
 					'name'         => 'phone',
 					'label'        => 'Phone',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_d3f4adb7797b3f96',
 				),
-				3 => array(
+				array(
 					'name'         => 'email',
 					'label'        => 'Email',
 					'type'         => 'email',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_5178f1d95c0915b3',
 				),
-				4 => array(
+				array(
 					'name'         => 'map_link',
 					'label'        => 'Map link',
 					'type'         => 'url',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_faa0e12efbc8345d',
 				),
-				5 => array(
+				array(
 					'name'         => 'country',
 					'label'        => 'Country',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_9df02313c32f4da6',
 				),
-				6 => array(
+				array(
 					'name'         => 'flag',
 					'label'        => 'Country flag',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_a3b52da1938c9b49',
 				),
-				7 => array(
+				array(
 					'name'         => 'tag',
 					'label'        => 'Badge',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_c6e3b2ccf8d682f4',
 				),
-				8 => array(
+				array(
 					'name'         => 'map_x',
 					'label'        => 'Map horizontal position (%)',
 					'type'         => 'number',
@@ -138,7 +138,7 @@ return array(
 					'step'         => 0.1,
 					'key'          => 'field_bl_b7cfa526eb6b2e26',
 				),
-				9 => array(
+				array(
 					'name'         => 'map_y',
 					'label'        => 'Map vertical position (%)',
 					'type'         => 'number',
@@ -152,7 +152,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_0c8117a84e64ed7c',
 		),
-		7  => array(
+		array(
 			'name'          => 'map_image',
 			'label'         => 'Regional map',
 			'type'          => 'image',
@@ -160,20 +160,20 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_f545c9e9e3cf7358',
 		),
-		8  => array(
+		array(
 			'name'         => 'cta',
 			'label'        => 'CTA',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_4b2dc79d4abb3ef6',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -182,7 +182,7 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_6629cfda7d8198a2',
 				),
-				2 => array(
+				array(
 					'name'          => 'destination',
 					'label'         => 'Destination',
 					'type'          => 'link',
@@ -190,14 +190,14 @@ return array(
 					'return_format' => 'array',
 					'key'           => 'field_bl_27cab97284d42d62',
 				),
-				3 => array(
+				array(
 					'name'         => 'btn_btn_primary',
 					'label'        => 'Button label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_dad7125dba7f9a2a',
 				),
-				4 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -239,45 +239,55 @@ return array(
 					),
 					'key'          => 'field_bl_c8ce30fe266d7c45',
 				),
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_c8ce30fe266d7c45_image',
+				),
 			),
 			'layout'       => 'block',
 			'key'          => 'field_bl_e0e6785ec660b2a7',
 		),
-		9  => array(
+		array(
 			'name'         => 'footer',
 			'label'        => 'Footer',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Footer description',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_c5f66c9c25dd9107',
 				),
-				1 => array(
+				array(
 					'name'         => 'footer_heading',
 					'label'        => 'Company menu heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_3c8b21d5fff66f19',
 				),
-				2 => array(
+				array(
 					'name'         => 'footer_heading_2',
 					'label'        => 'Offices menu heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_6099f37edc121354',
 				),
-				3 => array(
+				array(
 					'name'         => 'label',
 					'label'        => 'Copyright text',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_b19e44bb80c94742',
 				),
-				4 => array(
+				array(
 					'name'         => 'label_2',
 					'label'        => 'Website label',
 					'type'         => 'text',
@@ -288,13 +298,13 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_8c87d8943088a392',
 		),
-		10 => array(
+		array(
 			'name'         => 'form_services',
 			'label'        => 'Form service choices',
 			'type'         => 'repeater',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'label',
 					'label'        => 'Service label',
 					'type'         => 'text',
@@ -305,7 +315,7 @@ return array(
 			'layout'       => 'table',
 			'key'          => 'field_bl_cd2001ef136a1461',
 		),
-		11 => array(
+		array(
 			'key'          => 'field_bl_home_client_count',
 			'name'         => 'home_client_count',
 			'label'        => 'Clients shown on homepage',
@@ -315,7 +325,7 @@ return array(
 			'step'         => 1,
 			'instructions' => 'Number of entries shown, following the shared list display order.',
 		),
-		12 => array(
+		array(
 			'key'          => 'field_bl_home_team_count',
 			'name'         => 'home_team_count',
 			'label'        => 'Team members shown on homepage',
@@ -325,7 +335,7 @@ return array(
 			'step'         => 1,
 			'instructions' => 'Number of entries shown, following the shared list display order.',
 		),
-		13 => array(
+		array(
 			'key'          => 'field_bl_footer_contact_heading',
 			'name'         => 'footer_contact_heading',
 			'label'        => 'Contact column heading',
@@ -334,20 +344,20 @@ return array(
 		),
 	),
 	'clients'      => array(
-		0 => array(
+		array(
 			'name'         => 'clients',
 			'label'        => 'Clients',
 			'type'         => 'repeater',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'name',
 					'label'        => 'Client name',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_89c86179ed2c7518',
 				),
-				1 => array(
+				array(
 					'name'          => 'logo',
 					'label'         => 'Logo',
 					'type'          => 'image',
@@ -355,7 +365,7 @@ return array(
 					'return_format' => 'id',
 					'key'           => 'field_bl_aac7e322be51d68b',
 				),
-				2 => array(
+				array(
 					'name'         => 'website',
 					'label'        => 'Website',
 					'type'         => 'url',
@@ -366,20 +376,20 @@ return array(
 			'layout'       => 'table',
 			'key'          => 'field_bl_bc0137bbae90b311',
 		),
-		1 => array(
+		array(
 			'name'         => 'home_summary',
 			'label'        => 'Homepage summary',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_8f9fd45ecf35ad91',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -388,7 +398,7 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_8d492d3e268160c4',
 				),
-				2 => array(
+				array(
 					'name'          => 'destination',
 					'label'         => 'Destination',
 					'type'          => 'link',
@@ -396,14 +406,14 @@ return array(
 					'return_format' => 'array',
 					'key'           => 'field_bl_a9ef22f3c197764f',
 				),
-				3 => array(
+				array(
 					'name'         => 'btn_btn_ghost',
 					'label'        => 'Btn Btn-Ghost',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_b36085412de3c313',
 				),
-				4 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -445,17 +455,27 @@ return array(
 					),
 					'key'          => 'field_bl_ab57f6d1c64fa8f1',
 				),
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_ab57f6d1c64fa8f1_image',
+				),
 			),
 			'layout'       => 'block',
 			'key'          => 'field_bl_d8024c0c5313f5bc',
 		),
-		2 => array(
+		array(
 			'name'         => 'section_0',
 			'label'        => 'Page introduction',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -468,7 +488,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_7fbe295249c33bb6',
 		),
-		3 => array(
+		array(
 			'name'         => 'section_1',
 			'label'        => 'Client directory',
 			'type'         => 'group',
@@ -477,7 +497,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_512fb1ea8f33c887',
 		),
-		4 => array(
+		array(
 			'key'          => 'field_bl_meta_clients',
 			'name'         => 'meta_description',
 			'label'        => 'Search description',
@@ -488,13 +508,13 @@ return array(
 		),
 	),
 	'testimonials' => array(
-		0 => array(
+		array(
 			'name'         => 'testimonials',
 			'label'        => 'Testimonials',
 			'type'         => 'repeater',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'quote',
 					'label'        => 'Quote',
 					'type'         => 'textarea',
@@ -503,28 +523,28 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_7c5c30a74022daf3',
 				),
-				1 => array(
+				array(
 					'name'         => 'author',
 					'label'        => 'Author name',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_9dbe75c184d1452a',
 				),
-				2 => array(
+				array(
 					'name'         => 'position',
 					'label'        => 'Position',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_60b165b0af597763',
 				),
-				3 => array(
+				array(
 					'name'         => 'company',
 					'label'        => 'Company',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_0b1a0ebe29c2065a',
 				),
-				4 => array(
+				array(
 					'name'          => 'photo',
 					'label'         => 'Photo',
 					'type'          => 'image',
@@ -538,7 +558,7 @@ return array(
 		),
 	),
 	'team_post'    => array(
-		0 => array(
+		array(
 			'name'          => 'photo',
 			'label'         => 'Photo',
 			'type'          => 'image',
@@ -546,28 +566,28 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_1b0107cf1ef068e4',
 		),
-		1 => array(
+		array(
 			'name'         => 'position',
 			'label'        => 'Position',
 			'type'         => 'text',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'key'          => 'field_bl_11efd1229ac44299',
 		),
-		2 => array(
+		array(
 			'name'         => 'initials',
 			'label'        => 'Initials (when no photo)',
 			'type'         => 'text',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'key'          => 'field_bl_d86fa163a9dd1d0c',
 		),
-		3 => array(
+		array(
 			'name'         => 'branch',
 			'label'        => 'Branch',
 			'type'         => 'text',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'key'          => 'field_bl_70bada928e62e234',
 		),
-		4 => array(
+		array(
 			'name'         => 'biography',
 			'label'        => 'Biography',
 			'type'         => 'textarea',
@@ -576,20 +596,20 @@ return array(
 			'rows'         => 3,
 			'key'          => 'field_bl_a8addfd14cbabcbe',
 		),
-		5 => array(
+		array(
 			'name'         => 'social_links',
 			'label'        => 'Social links',
 			'type'         => 'repeater',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'label',
 					'label'        => 'Network',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_4f12646a2f5fda04',
 				),
-				1 => array(
+				array(
 					'name'         => 'url',
 					'label'        => 'URL',
 					'type'         => 'url',
@@ -602,13 +622,13 @@ return array(
 		),
 	),
 	'home'         => array(
-		0  => array(
+		array(
 			'name'         => 'hero_slides',
 			'label'        => 'Hero slides',
 			'type'         => 'repeater',
 			'instructions' => 'Drag slides to reorder. An image replaces the decorative dashboard when supplied.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'textarea',
@@ -617,7 +637,7 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_6c6363dd002afca5',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -626,14 +646,14 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_ca1a3f1a3594ac69',
 				),
-				2 => array(
+				array(
 					'name'         => 'button_label',
 					'label'        => 'Primary button label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_d4687548f3a84988',
 				),
-				3 => array(
+				array(
 					'name'          => 'button',
 					'label'         => 'Primary destination',
 					'type'          => 'link',
@@ -641,14 +661,14 @@ return array(
 					'return_format' => 'array',
 					'key'           => 'field_bl_96f198ca60758fda',
 				),
-				4 => array(
+				array(
 					'name'         => 'secondary_label',
 					'label'        => 'Secondary button label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_9ae479f14a045bb9',
 				),
-				5 => array(
+				array(
 					'name'          => 'secondary',
 					'label'         => 'Secondary destination',
 					'type'          => 'link',
@@ -656,7 +676,7 @@ return array(
 					'return_format' => 'array',
 					'key'           => 'field_bl_d27c869662389c4a',
 				),
-				6 => array(
+				array(
 					'name'          => 'image',
 					'label'         => 'Image (replaces dashboard)',
 					'type'          => 'image',
@@ -664,7 +684,7 @@ return array(
 					'return_format' => 'id',
 					'key'           => 'field_bl_7cb92a0a369362f6',
 				),
-				7 => array(
+				array(
 					'name'         => 'dashboard_type',
 					'label'        => 'Dashboard style',
 					'type'         => 'select',
@@ -675,47 +695,47 @@ return array(
 					),
 					'key'          => 'field_bl_60a52a8ac3312ea7',
 				),
-				8 => array(
+				array(
 					'name'         => 'financial',
 					'label'        => 'Financial dashboard',
 					'type'         => 'group',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'sub_fields'   => array(
-						0  => array(
+						array(
 							'name'         => 'aria_label',
 							'label'        => 'Accessible label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_9bdd0366968181e5',
 						),
-						1  => array(
+						array(
 							'name'         => 'pl_eyebrow',
 							'label'        => 'Statement heading',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_bbc4e94daa9f33c3',
 						),
-						2  => array(
+						array(
 							'name'         => 'pl_firm',
 							'label'        => 'Company label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_f1ddb7a39658d7ae',
 						),
-						3  => array(
+						array(
 							'name'         => 'pl_unit',
 							'label'        => 'Units',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_902b9616432a102b',
 						),
-						4  => array(
+						array(
 							'name'         => 'pl_mini_items',
 							'label'        => 'Pl Mini Items',
 							'type'         => 'repeater',
 							'instructions' => 'Add, remove, or drag rows to reorder.',
 							'sub_fields'   => array(
-								0 => array(
+								array(
 									'name'          => 'layout',
 									'label'         => 'Card style',
 									'type'          => 'select',
@@ -731,21 +751,21 @@ return array(
 									'default_value' => '1',
 									'key'           => 'field_bl_806113aaa9a91d89',
 								),
-								1 => array(
+								array(
 									'name'         => 'statement_label',
 									'label'        => 'Statement Label',
 									'type'         => 'text',
 									'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 									'key'          => 'field_bl_99bdd6294a393bcf',
 								),
-								2 => array(
+								array(
 									'name'         => 'data_target',
 									'label'        => 'Animated value',
 									'type'         => 'number',
 									'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 									'key'          => 'field_bl_2e9346a613804c0a',
 								),
-								3 => array(
+								array(
 									'name'         => 'data_target_2',
 									'label'        => 'Data-Target',
 									'type'         => 'number',
@@ -757,35 +777,35 @@ return array(
 							'button_label' => 'Add item',
 							'key'          => 'field_bl_d737d3ad85d06104',
 						),
-						5  => array(
+						array(
 							'name'         => 'label',
 							'label'        => 'Label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_28d0fd5b8ce035d1',
 						),
-						6  => array(
+						array(
 							'name'         => 'data_target',
 							'label'        => 'Animated value',
 							'type'         => 'number',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_137349e01ca05d7b',
 						),
-						7  => array(
+						array(
 							'name'         => 'label_2',
 							'label'        => 'Label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_c1512c2c52965410',
 						),
-						8  => array(
+						array(
 							'name'         => 'data_target_2',
 							'label'        => 'Data-Target',
 							'type'         => 'number',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_1efd4259d1cea1cd',
 						),
-						9  => array(
+						array(
 							'name'         => 'icon',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -827,7 +847,17 @@ return array(
 							),
 							'key'          => 'field_bl_d94aa647d2872d84',
 						),
-						10 => array(
+						array(
+							'name'          => 'icon_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_d94aa647d2872d84_image',
+						),
+						array(
 							'name'         => 'label_3',
 							'label'        => 'Label',
 							'type'         => 'text',
@@ -838,26 +868,26 @@ return array(
 					'layout'       => 'block',
 					'key'          => 'field_bl_f380eca80c439b99',
 				),
-				9 => array(
+				array(
 					'name'         => 'growth',
 					'label'        => 'Growth dashboard',
 					'type'         => 'group',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'aria_label',
 							'label'        => 'Accessible label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_64aa6f2674033859',
 						),
-						1 => array(
+						array(
 							'name'         => 'hero_dash_growth_grid_items',
 							'label'        => 'Hero Dash Growth Grid Items',
 							'type'         => 'repeater',
 							'instructions' => 'Add, remove, or drag rows to reorder.',
 							'sub_fields'   => array(
-								0 => array(
+								array(
 									'name'          => 'layout',
 									'label'         => 'Card style',
 									'type'          => 'select',
@@ -872,42 +902,42 @@ return array(
 									'default_value' => '1',
 									'key'           => 'field_bl_5e331dbd6614f547',
 								),
-								1 => array(
+								array(
 									'name'         => 'gg_label',
 									'label'        => 'Gg-Label',
 									'type'         => 'text',
 									'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 									'key'          => 'field_bl_14b2bc09037294ca',
 								),
-								2 => array(
+								array(
 									'name'         => 'data_target',
 									'label'        => 'Animated value',
 									'type'         => 'number',
 									'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 									'key'          => 'field_bl_5bc71c41c994f967',
 								),
-								3 => array(
+								array(
 									'name'         => 'gg_val',
 									'label'        => 'Gg-Val',
 									'type'         => 'text',
 									'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 									'key'          => 'field_bl_f27a6766514004b6',
 								),
-								4 => array(
+								array(
 									'name'         => 'data_target_2',
 									'label'        => 'Data-Target',
 									'type'         => 'number',
 									'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 									'key'          => 'field_bl_99085a34ea1e954d',
 								),
-								5 => array(
+								array(
 									'name'         => 'gg_unit',
 									'label'        => 'Gg-Unit',
 									'type'         => 'text',
 									'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 									'key'          => 'field_bl_3b8d908dfb193438',
 								),
-								6 => array(
+								array(
 									'name'         => 'gg_delta_up',
 									'label'        => 'Gg-Delta Up',
 									'type'         => 'text',
@@ -927,19 +957,19 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_380dcbd79b82ab9e',
 		),
-		1  => array(
+		array(
 			'name'         => 'section_1',
 			'label'        => 'Statistics',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'stats_grid_items',
 					'label'        => 'Stats Grid Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'          => 'layout',
 							'label'         => 'Card style',
 							'type'          => 'select',
@@ -953,35 +983,35 @@ return array(
 							'default_value' => '1',
 							'key'           => 'field_bl_5f7f4226d2a0e463',
 						),
-						1 => array(
+						array(
 							'name'         => 'data_count',
 							'label'        => 'Counter value',
 							'type'         => 'number',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_e585f4fe1395c4dd',
 						),
-						2 => array(
+						array(
 							'name'         => 'stat_label',
 							'label'        => 'Stat-Label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_0d3565eb0ed8d465',
 						),
-						3 => array(
+						array(
 							'name'         => 'stat_sub',
 							'label'        => 'Stat-Sub',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_2b1495b8bc4fe163',
 						),
-						4 => array(
+						array(
 							'name'         => 'stat_num_stat_num_text',
 							'label'        => 'Stat-Num Stat-Num-Text',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_c2c7cf9d3d755fe2',
 						),
-						5 => array(
+						array(
 							'name'         => 'stat_num',
 							'label'        => 'Stat-Num',
 							'type'         => 'text',
@@ -997,13 +1027,13 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_85bca383a3b56c96',
 		),
-		2  => array(
+		array(
 			'name'         => 'section_2',
 			'label'        => 'Why choose us',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -1045,14 +1075,24 @@ return array(
 					),
 					'key'          => 'field_bl_bbe978179d7606e0',
 				),
-				1 => array(
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_bbe978179d7606e0_image',
+				),
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_b0d18f94e14e68fc',
 				),
-				2 => array(
+				array(
 					'name'         => 'lead',
 					'label'        => 'Lead',
 					'type'         => 'textarea',
@@ -1061,7 +1101,7 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_70d90665259ae3b3',
 				),
-				3 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1070,13 +1110,13 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_ee3ce32ba9d3b9bb',
 				),
-				4 => array(
+				array(
 					'name'         => 'why_list_reveal_items',
 					'label'        => 'Why List Reveal Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'icon',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -1118,7 +1158,17 @@ return array(
 							),
 							'key'          => 'field_bl_2abe06a8813fc13c',
 						),
-						1 => array(
+						array(
+							'name'          => 'icon_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_2abe06a8813fc13c_image',
+						),
+						array(
 							'name'         => 'label',
 							'label'        => 'Label',
 							'type'         => 'text',
@@ -1134,7 +1184,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_15171fa9a47c308a',
 		),
-		3  => array(
+		array(
 			'name'          => 'source_about',
 			'label'         => 'Source page: About',
 			'type'          => 'post_object',
@@ -1146,20 +1196,20 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_5e62e2b7f0ce4909',
 		),
-		4  => array(
+		array(
 			'name'         => 'section_4',
 			'label'        => 'Team',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_e0703a93e6ed459d',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1168,7 +1218,7 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_239b452a4f4d47b0',
 				),
-				2 => array(
+				array(
 					'name'          => 'destination',
 					'label'         => 'Destination',
 					'type'          => 'link',
@@ -1176,14 +1226,14 @@ return array(
 					'return_format' => 'array',
 					'key'           => 'field_bl_5ddf9ac62a410f62',
 				),
-				3 => array(
+				array(
 					'name'         => 'btn_btn_ghost',
 					'label'        => 'Btn Btn-Ghost',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_68565093de5857ea',
 				),
-				4 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -1225,11 +1275,21 @@ return array(
 					),
 					'key'          => 'field_bl_368ff3ed4feb010e',
 				),
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_368ff3ed4feb010e_image',
+				),
 			),
 			'layout'       => 'block',
 			'key'          => 'field_bl_9dc6c1c78721aa75',
 		),
-		5  => array(
+		array(
 			'name'          => 'source_services',
 			'label'         => 'Source page: Services',
 			'type'          => 'post_object',
@@ -1241,7 +1301,7 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_80700fb9622b5d66',
 		),
-		6  => array(
+		array(
 			'name'          => 'source_clients',
 			'label'         => 'Source page: Clients',
 			'type'          => 'post_object',
@@ -1253,7 +1313,7 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_a92f131413aa3d58',
 		),
-		7  => array(
+		array(
 			'name'          => 'source_industries',
 			'label'         => 'Source page: Industries',
 			'type'          => 'post_object',
@@ -1265,20 +1325,20 @@ return array(
 			'return_format' => 'id',
 			'key'           => 'field_bl_4d43b3fec851ba43',
 		),
-		8  => array(
+		array(
 			'name'         => 'section_8',
 			'label'        => 'Branches',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_bb2367b1d2cc3569',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1291,13 +1351,13 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_df4bd94c5940a66a',
 		),
-		9  => array(
+		array(
 			'name'         => 'section_9',
 			'label'        => 'Testimonials',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
@@ -1308,7 +1368,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_02223f514dd04517',
 		),
-		10 => array(
+		array(
 			'key'          => 'field_bl_meta_home',
 			'name'         => 'meta_description',
 			'label'        => 'Search description',
@@ -1319,13 +1379,13 @@ return array(
 		),
 	),
 	'about'        => array(
-		0 => array(
+		array(
 			'name'         => 'home_summary',
 			'label'        => 'Homepage summary',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'          => 'image',
 					'label'         => 'Image',
 					'type'          => 'image',
@@ -1333,7 +1393,7 @@ return array(
 					'return_format' => 'id',
 					'key'           => 'field_bl_955819230ee5be5d',
 				),
-				1 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -1375,28 +1435,38 @@ return array(
 					),
 					'key'          => 'field_bl_2a14fd8558202d7e',
 				),
-				2 => array(
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_2a14fd8558202d7e_image',
+				),
+				array(
 					'name'         => 'strong',
 					'label'        => 'Strong',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_427f58a7ae957111',
 				),
-				3 => array(
+				array(
 					'name'         => 'label',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_ef3969ac5b9a9010',
 				),
-				4 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_f89f19537c6741d8',
 				),
-				5 => array(
+				array(
 					'name'         => 'lead',
 					'label'        => 'Lead',
 					'type'         => 'textarea',
@@ -1405,13 +1475,13 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_e340f4edc042a990',
 				),
-				6 => array(
+				array(
 					'name'         => 'features_stacked_items',
 					'label'        => 'Features Stacked Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'icon',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -1453,14 +1523,24 @@ return array(
 							),
 							'key'          => 'field_bl_817ae6064c5aa6c7',
 						),
-						1 => array(
+						array(
+							'name'          => 'icon_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_817ae6064c5aa6c7_image',
+						),
+						array(
 							'name'         => 'label',
 							'label'        => 'Label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_7fb4095602393133',
 						),
-						2 => array(
+						array(
 							'name'         => 'description',
 							'label'        => 'Description',
 							'type'         => 'text',
@@ -1472,7 +1552,7 @@ return array(
 					'button_label' => 'Add item',
 					'key'          => 'field_bl_793b3e10c80cb9b1',
 				),
-				7 => array(
+				array(
 					'name'          => 'destination',
 					'label'         => 'Destination',
 					'type'          => 'link',
@@ -1480,7 +1560,7 @@ return array(
 					'return_format' => 'array',
 					'key'           => 'field_bl_d6b24045046e3b4a',
 				),
-				8 => array(
+				array(
 					'name'         => 'btn_arrow',
 					'label'        => 'Link label',
 					'type'         => 'text',
@@ -1491,13 +1571,13 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_ac00867d9cd79c19',
 		),
-		1 => array(
+		array(
 			'name'         => 'section_0',
 			'label'        => 'Page introduction',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1510,20 +1590,20 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_8823e0b1c1076800',
 		),
-		2 => array(
+		array(
 			'name'         => 'section_1',
 			'label'        => 'Our approach',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_21d43b3ffb8fad5a',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1532,7 +1612,7 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_910ac056fdf06130',
 				),
-				2 => array(
+				array(
 					'name'         => 'description_2',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1541,7 +1621,7 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_914e4f0e35a651ee',
 				),
-				3 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -1583,37 +1663,47 @@ return array(
 					),
 					'key'          => 'field_bl_0c7383dc26ecffa8',
 				),
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_0c7383dc26ecffa8_image',
+				),
 			),
 			'layout'       => 'block',
 			'key'          => 'field_bl_e59a24655ccc86ad',
 		),
-		3 => array(
+		array(
 			'name'         => 'section_2',
 			'label'        => 'Our values',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_aa34da2c3e92cfc0',
 				),
-				1 => array(
+				array(
 					'name'         => 'feature_list_items',
 					'label'        => 'Feature List Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'label',
 							'label'        => 'Label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_b5581f3e128089c1',
 						),
-						1 => array(
+						array(
 							'name'         => 'description',
 							'label'        => 'Description',
 							'type'         => 'text',
@@ -1629,20 +1719,20 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_8ce4fb32698ee0a3',
 		),
-		4 => array(
+		array(
 			'name'         => 'section_3',
 			'label'        => 'Target market',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_4c2728139c569c4f',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1651,13 +1741,13 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_ac8c7789d1ab113d',
 				),
-				2 => array(
+				array(
 					'name'         => 'targets_items',
 					'label'        => 'Targets Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'icon',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -1699,14 +1789,24 @@ return array(
 							),
 							'key'          => 'field_bl_ed05c1e0d4357aa1',
 						),
-						1 => array(
+						array(
+							'name'          => 'icon_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_ed05c1e0d4357aa1_image',
+						),
+						array(
 							'name'         => 'label',
 							'label'        => 'Label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_355b928d12c399b1',
 						),
-						2 => array(
+						array(
 							'name'         => 'description',
 							'label'        => 'Description',
 							'type'         => 'textarea',
@@ -1724,7 +1824,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_118a346ef1b6768c',
 		),
-		5 => array(
+		array(
 			'key'          => 'field_bl_meta_about',
 			'name'         => 'meta_description',
 			'label'        => 'Search description',
@@ -1735,20 +1835,20 @@ return array(
 		),
 	),
 	'services'     => array(
-		0 => array(
+		array(
 			'name'         => 'home_summary',
 			'label'        => 'Homepage summary',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_8eccac323f9ef5b9',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1757,13 +1857,13 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_84d74f5bbdbbedea',
 				),
-				2 => array(
+				array(
 					'name'         => 'bento_items',
 					'label'        => 'Bento Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'          => 'layout',
 							'label'         => 'Card style',
 							'type'          => 'select',
@@ -1776,7 +1876,7 @@ return array(
 							'default_value' => '1',
 							'key'           => 'field_bl_4efdb50dab07b7c9',
 						),
-						1 => array(
+						array(
 							'name'         => 'icon',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -1818,14 +1918,24 @@ return array(
 							),
 							'key'          => 'field_bl_4273bb3c220a8e38',
 						),
-						2 => array(
+						array(
+							'name'          => 'icon_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_4273bb3c220a8e38_image',
+						),
+						array(
 							'name'         => 'card_title',
 							'label'        => 'Card Title',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_ce21223afafb6d0d',
 						),
-						3 => array(
+						array(
 							'name'         => 'description',
 							'label'        => 'Description',
 							'type'         => 'textarea',
@@ -1834,7 +1944,7 @@ return array(
 							'rows'         => 3,
 							'key'          => 'field_bl_4fc0aa61f7890d4d',
 						),
-						4 => array(
+						array(
 							'name'          => 'destination',
 							'label'         => 'Destination',
 							'type'          => 'link',
@@ -1842,14 +1952,14 @@ return array(
 							'return_format' => 'array',
 							'key'           => 'field_bl_a0c31c4b4551cf79',
 						),
-						5 => array(
+						array(
 							'name'         => 'bento_cta',
 							'label'        => 'Button label',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_bf64286a2275f5cf',
 						),
-						6 => array(
+						array(
 							'name'         => 'icon_2',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -1891,7 +2001,17 @@ return array(
 							),
 							'key'          => 'field_bl_b8b17eeb2958d1ee',
 						),
-						7 => array(
+						array(
+							'name'          => 'icon_2_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_b8b17eeb2958d1ee_image',
+						),
+						array(
 							'name'         => 'bento_meta',
 							'label'        => 'Badge',
 							'type'         => 'text',
@@ -1903,7 +2023,7 @@ return array(
 					'button_label' => 'Add item',
 					'key'          => 'field_bl_43f2a1f254b7b032',
 				),
-				3 => array(
+				array(
 					'name'          => 'destination',
 					'label'         => 'Destination',
 					'type'          => 'link',
@@ -1911,14 +2031,14 @@ return array(
 					'return_format' => 'array',
 					'key'           => 'field_bl_6b21a063d7e9862c',
 				),
-				4 => array(
+				array(
 					'name'         => 'btn_btn_ghost',
 					'label'        => 'Btn Btn-Ghost',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_c5b3e140462c5636',
 				),
-				5 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -1960,17 +2080,27 @@ return array(
 					),
 					'key'          => 'field_bl_8d6bf305116bde66',
 				),
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_8d6bf305116bde66_image',
+				),
 			),
 			'layout'       => 'block',
 			'key'          => 'field_bl_bd5af88819db4626',
 		),
-		1 => array(
+		array(
 			'name'         => 'section_0',
 			'label'        => 'Page introduction',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -1983,19 +2113,19 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_b3c8231b4b77f291',
 		),
-		2 => array(
+		array(
 			'name'         => 'section_1',
 			'label'        => 'Services',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'grid_items',
 					'label'        => 'Grid Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'icon',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -2037,14 +2167,24 @@ return array(
 							),
 							'key'          => 'field_bl_09cded81b1a253df',
 						),
-						1 => array(
+						array(
+							'name'          => 'icon_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_09cded81b1a253df_image',
+						),
+						array(
 							'name'         => 'card_title',
 							'label'        => 'Card Title',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_2acd0cd0161e959f',
 						),
-						2 => array(
+						array(
 							'name'         => 'description',
 							'label'        => 'Description',
 							'type'         => 'textarea',
@@ -2062,47 +2202,47 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_ac43e740fc6ea50d',
 		),
-		3 => array(
+		array(
 			'name'         => 'section_2',
 			'label'        => 'Our process',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_0c1c98a4f9c3b50e',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_e70d657cbf62a2f4',
 				),
-				2 => array(
+				array(
 					'name'         => 'process_flow_items',
 					'label'        => 'Process Flow Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'process_num',
 							'label'        => 'Process-Num',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_537fee204bf82408',
 						),
-						1 => array(
+						array(
 							'name'         => 'card_title',
 							'label'        => 'Card Title',
 							'type'         => 'text',
 							'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 							'key'          => 'field_bl_a88f94227e1d74e2',
 						),
-						2 => array(
+						array(
 							'name'         => 'description',
 							'label'        => 'Description',
 							'type'         => 'text',
@@ -2118,7 +2258,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_d76fb9beeeb9180c',
 		),
-		4 => array(
+		array(
 			'key'          => 'field_bl_meta_services',
 			'name'         => 'meta_description',
 			'label'        => 'Search description',
@@ -2129,20 +2269,20 @@ return array(
 		),
 	),
 	'industries'   => array(
-		0 => array(
+		array(
 			'name'         => 'home_summary',
 			'label'        => 'Homepage summary',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'heading',
 					'label'        => 'Heading',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_f6e2e37368f87717',
 				),
-				1 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -2151,13 +2291,13 @@ return array(
 					'rows'         => 3,
 					'key'          => 'field_bl_599a86eeef4911cd',
 				),
-				2 => array(
+				array(
 					'name'         => 'industries_grid_items',
 					'label'        => 'Industries Grid Items',
 					'type'         => 'repeater',
 					'instructions' => 'Add, remove, or drag rows to reorder.',
 					'sub_fields'   => array(
-						0 => array(
+						array(
 							'name'         => 'icon',
 							'label'        => 'Icon',
 							'type'         => 'select',
@@ -2199,7 +2339,17 @@ return array(
 							),
 							'key'          => 'field_bl_550fbf08d9682d5e',
 						),
-						1 => array(
+						array(
+							'name'          => 'icon_image',
+							'label'         => 'Icon image override',
+							'type'          => 'image',
+							'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+							'return_format' => 'id',
+							'preview_size'  => 'thumbnail',
+							'library'       => 'all',
+							'key'           => 'field_bl_550fbf08d9682d5e_image',
+						),
+						array(
 							'name'         => 'label',
 							'label'        => 'Label',
 							'type'         => 'text',
@@ -2217,13 +2367,13 @@ return array(
 		),
 	),
 	'team'         => array(
-		0 => array(
+		array(
 			'name'         => 'section_0',
 			'label'        => 'Page introduction',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -2236,7 +2386,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_b69ffcc4f6b922f5',
 		),
-		1 => array(
+		array(
 			'name'         => 'section_1',
 			'label'        => 'Team directory',
 			'type'         => 'group',
@@ -2245,7 +2395,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_1081985cc5e6e34f',
 		),
-		2 => array(
+		array(
 			'key'          => 'field_bl_meta_team',
 			'name'         => 'meta_description',
 			'label'        => 'Search description',
@@ -2256,13 +2406,13 @@ return array(
 		),
 	),
 	'contact'      => array(
-		0 => array(
+		array(
 			'name'         => 'section_0',
 			'label'        => 'Page introduction',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0 => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'textarea',
@@ -2275,125 +2425,125 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_9debf3b5529a1809',
 		),
-		1 => array(
+		array(
 			'name'         => 'section_1',
 			'label'        => 'Contact details and form',
 			'type'         => 'group',
 			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 			'sub_fields'   => array(
-				0  => array(
+				array(
 					'name'         => 'label',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_b1a3abb2022e3cd6',
 				),
-				1  => array(
+				array(
 					'name'         => 'label_2',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_032d2994acded171',
 				),
-				2  => array(
+				array(
 					'name'         => 'label_3',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_518424252ee1f195',
 				),
-				3  => array(
+				array(
 					'name'         => 'label_4',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_7b29e8b8f1e88547',
 				),
-				4  => array(
+				array(
 					'name'         => 'card_title',
 					'label'        => 'Card Title',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_f915eb6de69ed842',
 				),
-				5  => array(
+				array(
 					'name'         => 'description',
 					'label'        => 'Description',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_b5af3bde534f1a53',
 				),
-				6  => array(
+				array(
 					'name'         => 'label_5',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_e4313aea8ab58ac0',
 				),
-				7  => array(
+				array(
 					'name'         => 'label_6',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_8aef841196ee986a',
 				),
-				8  => array(
+				array(
 					'name'         => 'label_7',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_50c03f3299803fd4',
 				),
-				9  => array(
+				array(
 					'name'         => 'label_8',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_bd2565d43a4cdecb',
 				),
-				10 => array(
+				array(
 					'name'         => 'label_9',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_6db76fd6a1eccf98',
 				),
-				11 => array(
+				array(
 					'name'         => 'label_10',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_ff7b747e631d7e29',
 				),
-				12 => array(
+				array(
 					'name'         => 'option',
 					'label'        => 'Option',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_3ed617d28ff08e42',
 				),
-				13 => array(
+				array(
 					'name'         => 'label_11',
 					'label'        => 'Label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_e814f7ef558e25f8',
 				),
-				14 => array(
+				array(
 					'name'         => 'placeholder',
 					'label'        => 'Placeholder',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_83362b27c80e00fa',
 				),
-				15 => array(
+				array(
 					'name'         => 'btn_btn_primary',
 					'label'        => 'Button label',
 					'type'         => 'text',
 					'instructions' => 'Plain text only. Leave optional content empty to hide it.',
 					'key'          => 'field_bl_8e570105dffd9334',
 				),
-				16 => array(
+				array(
 					'name'         => 'icon',
 					'label'        => 'Icon',
 					'type'         => 'select',
@@ -2435,11 +2585,21 @@ return array(
 					),
 					'key'          => 'field_bl_9620b2f16c80e377',
 				),
+				array(
+					'name'          => 'icon_image',
+					'label'         => 'Icon image override',
+					'type'          => 'image',
+					'instructions'  => 'Optional. Choose an image to replace the selected built-in icon. Remove it to use the dropdown icon again.',
+					'return_format' => 'id',
+					'preview_size'  => 'thumbnail',
+					'library'       => 'all',
+					'key'           => 'field_bl_9620b2f16c80e377_image',
+				),
 			),
 			'layout'       => 'block',
 			'key'          => 'field_bl_85ac622034501eb6',
 		),
-		2 => array(
+		array(
 			'key'          => 'field_bl_meta_contact',
 			'name'         => 'meta_description',
 			'label'        => 'Search description',

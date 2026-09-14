@@ -55,3 +55,7 @@ Verified all six custom templates are registered by WordPress; old assignments r
 ## Version 1.3.1 automatic updates
 
 Verified an administrator check populates the native WordPress update transient, repeated visits reuse the check interval, and the custom updater page/action are removed. The existing GitHub release-validation tests still pass. GitHub publishing now runs on theme changes pushed to main and assigns a new patch version when needed.
+
+## Version 1.3.2 icon controls
+
+Verified all 16 icon dropdowns retain their choices and have paired image overrides. Nested repeater values render the image when selected and restore the built-in icon when removed. Confirmed image uploaders and SVG dropdown previews render in the Services editor. PHP and JavaScript syntax checks pass.

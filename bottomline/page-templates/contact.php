@@ -108,7 +108,7 @@ while ( have_posts() ) :
 								<label for="message"><?php echo bl_text( $data['label_11'] ?? '' ); ?></label>
 								<textarea id="message" name="message" maxlength="10000" required="" placeholder="<?php echo esc_attr( $data['placeholder'] ?? '' ); ?>"><?php echo esc_textarea( bl_form_old( 'message' ) ); ?></textarea>
 							</div>
-							<button type="submit" class="btn btn-primary"><?php echo bl_text( $data['btn_btn_primary'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '' ); ?></button>
+							<button type="submit" class="btn btn-primary"><?php echo bl_text( $data['btn_btn_primary'] ?? '' ); ?><?php bl_icon( $data['icon'] ?? '', $data['icon_image'] ?? 0 ); ?></button>
 						</form>
 					</div>
 				</div>
