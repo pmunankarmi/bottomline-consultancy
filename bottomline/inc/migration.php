@@ -183,7 +183,7 @@ function bl_import_content() {
 			}
 		}
 		foreach ( $data['team'] as $order => $member ) {
-			$source   = sanitize_title( $member['name'] );
+			$source   = $member['source'] ?? sanitize_title( $member['name'] );
 			$existing = get_posts(
 				array(
 					'post_type'      => 'team',

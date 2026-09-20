@@ -91,6 +91,10 @@ while ( have_posts() ) :
 	if ( $source && get_post_status( $source ) === 'publish' ) {
 		get_template_part( 'template-parts/about-summary', null, array( 'source' => $source ) );
 	}
+	$source = absint( bl_field( 'source_services' ) );
+	if ( $source && get_post_status( $source ) === 'publish' ) {
+		get_template_part( 'template-parts/services-summary', null, array( 'source' => $source ) );
+	}
 	$data = bl_field( 'section_4', get_the_ID() );
 	if ( (int) wp_count_posts( 'team' )->publish && bl_has_content( $data ) ) :
 		?>
@@ -108,10 +112,6 @@ while ( have_posts() ) :
 		</section>
 	<?php endif; ?>
 	<?php
-	$source = absint( bl_field( 'source_services' ) );
-	if ( $source && get_post_status( $source ) === 'publish' ) {
-		get_template_part( 'template-parts/services-summary', null, array( 'source' => $source ) );
-	}
 	$source = absint( bl_field( 'source_clients' ) );
 	if ( $source && get_post_status( $source ) === 'publish' ) {
 		get_template_part( 'template-parts/clients-summary', null, array( 'source' => $source ) );

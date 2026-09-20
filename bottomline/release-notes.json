@@ -1,4 +1,11 @@
 {
+  "1.3.8": [
+    "Corrected Elie Moutran and Al-Khedr Makke in the team directory.",
+    "Moved Hisham Youssef before Mohammad Rushdi.",
+    "Moved Services above Team on the homepage.",
+    "Changed the contact label to WhatsApp/Phone.",
+    "Added the Buildozer testimonial from Jad Abou Hamdan."
+  ],
   "1.3.7": [
     "Fixed version details so they stay inside the WordPress popup.",
     "Removed the GitHub link from version details.",

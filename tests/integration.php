@@ -8,7 +8,7 @@ check(bl_acf_ready(),'ACF Pro active');
 check((int)wp_count_posts('team')->publish===32,'32 migrated team posts');
 check(count(bl_rows(bl_field('clients','option')))===82,'82 canonical client records');
 check(count(bl_rows(bl_field('branches','option')))===4,'4 canonical branches');
-check(count(bl_rows(bl_field('testimonials','option')))===2,'2 shared testimonials');
+check(count(bl_rows(bl_field('testimonials','option')))===3,'3 shared testimonials');
 $home=(int)get_option('page_on_front');
 check(count(bl_field('hero_slides',$home))===2,'2 editable hero slides');
 check(count(bl_field('section_1',$home)['stats_grid_items'])===4,'4 statistic rows');

@@ -1219,6 +1219,18 @@ return array(
 			'key'           => 'field_bl_5e62e2b7f0ce4909',
 		),
 		array(
+			'name'          => 'source_services',
+			'label'         => 'Source page: Services',
+			'type'          => 'post_object',
+			'instructions'  => 'Content is read from this page’s Homepage summary tab; links use its permalink.',
+			'post_type'     => array(
+				0 => 'page',
+			),
+			'allow_null'    => 1,
+			'return_format' => 'id',
+			'key'           => 'field_bl_80700fb9622b5d66',
+		),
+		array(
 			'name'         => 'section_4',
 			'label'        => 'Team',
 			'type'         => 'group',
@@ -1311,18 +1323,7 @@ return array(
 			'layout'       => 'block',
 			'key'          => 'field_bl_9dc6c1c78721aa75',
 		),
-		array(
-			'name'          => 'source_services',
-			'label'         => 'Source page: Services',
-			'type'          => 'post_object',
-			'instructions'  => 'Content is read from this page’s Homepage summary tab; links use its permalink.',
-			'post_type'     => array(
-				0 => 'page',
-			),
-			'allow_null'    => 1,
-			'return_format' => 'id',
-			'key'           => 'field_bl_80700fb9622b5d66',
-		),
+
 		array(
 			'name'          => 'source_clients',
 			'label'         => 'Source page: Clients',

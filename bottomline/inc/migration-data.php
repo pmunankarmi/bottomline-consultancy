@@ -812,6 +812,13 @@ return array(
 					'company'  => '',
 					'photo'    => '',
 				),
+				2 => array(
+					'quote'    => '“We are very happy with the HR, accounting, and tax consultancy services provided by your team. You have been a great support to our company, and we are highly satisfied with the quality of your services and assistance so far. We truly appreciate your continued support and look forward to maintaining our successful working relationship.”',
+					'author'   => 'Jad Abou Hamdan',
+					'position' => 'General Manager',
+					'company'  => 'Buildozer',
+					'photo'    => '',
+				),
 			),
 		),
 		'team_post'    => array(
@@ -1444,7 +1451,7 @@ Fully Saudi-Compliant.',
 					'Whether you\'re launching a new company, expanding into Saudi Arabia, or strengthening your financial operations, our experts are here to help.',
 			),
 			'section_1'        => array(
-				'label'           => 'Phone',
+				'label'           => 'WhatsApp/Phone',
 				'label_2'         => 'Email',
 				'label_3'         => 'Website',
 				'label_4'         => 'Our Offices',
@@ -1468,193 +1475,196 @@ Fully Saudi-Compliant.',
 		),
 	),
 	'team'   => array(
-		0  => array(
+		array(
 			'name'     => 'Toufic Moutran',
 			'position' => 'Managing Director',
 			'initials' => 'TM',
 			'branch'   => '',
 		),
-		1  => array(
+		array(
 			'name'     => 'Khaled Shalha',
 			'position' => 'General Manager',
 			'initials' => 'KS',
 			'branch'   => 'Jeddah',
 		),
-		2  => array(
+		array(
 			'name'     => 'Ghada Jemimi',
 			'position' => 'Head of Legal & HR',
 			'initials' => 'GJ',
 			'branch'   => 'Jeddah',
 		),
-		3  => array(
+		array(
 			'name'     => 'Greeshma',
 			'position' => 'Head of Accounting, Tax Executive',
 			'initials' => 'G',
 			'branch'   => 'Dubai',
 		),
-		4  => array(
+		array(
 			'name'     => 'Camil Abdullah',
 			'position' => 'Account Director',
 			'initials' => 'CA',
 			'branch'   => 'Lebanon',
 		),
-		5  => array(
+		array(
 			'name'     => 'Bouchra Mallah',
 			'position' => 'Account Director — Marketing & Communication',
 			'initials' => 'BM',
 			'branch'   => 'Riyadh',
 		),
-		6  => array(
+		array(
 			'name'     => 'Metwally El Sherbini',
 			'position' => 'Audit Manager & Financial Consultant',
 			'initials' => 'MS',
 			'branch'   => 'Riyadh',
 		),
-		7  => array(
+		array(
 			'name'     => 'Jacky Haddad',
 			'position' => 'Administration Manager',
 			'initials' => 'JH',
 			'branch'   => 'Jeddah',
 		),
-		8  => array(
+		array(
 			'name'     => 'Tima Zaarour',
 			'position' => 'Senior Account Executive, Business Development',
 			'initials' => 'TZ',
 			'branch'   => 'Riyadh',
 		),
-		9  => array(
+		array(
 			'name'     => 'Georges Moutran',
 			'position' => 'Management & Administration Executive',
 			'initials' => 'GM',
 			'branch'   => 'Jeddah',
 		),
-		10 => array(
+		array(
 			'name'     => 'Ahmed Hussein',
 			'position' => 'Auditor & Financial Executive',
 			'initials' => 'AH',
 			'branch'   => 'Riyadh',
 		),
-		11 => array(
+		array(
 			'name'     => 'Lina Al Qarni',
 			'position' => 'Human Resources Executive',
 			'initials' => 'LQ',
 			'branch'   => 'Jeddah',
 		),
-		12 => array(
+		array(
 			'name'     => 'Mostafa Awad',
 			'position' => 'Senior Auditor, Zakat & Tax Consultant',
 			'initials' => 'MA',
 			'branch'   => 'Jeddah',
 		),
-		13 => array(
+		array(
 			'name'     => 'Hisham Hassan',
 			'position' => 'Senior Auditor & Zakat/Tax Consultant',
 			'initials' => 'HH',
 			'branch'   => 'Jeddah',
 		),
-		14 => array(
+		array(
 			'name'     => 'Mohammed Ahmed',
 			'position' => 'Senior Auditor & Financial Consultant',
 			'initials' => 'MAh',
 			'branch'   => 'Jeddah',
 		),
-		15 => array(
-			'name'     => 'Mohammad Rushdi',
-			'position' => 'Senior Auditor',
-			'initials' => 'MR',
-			'branch'   => 'Jeddah',
-		),
-		16 => array(
-			'name'     => 'Mohamed Gamal',
-			'position' => 'Senior Auditor',
-			'initials' => 'MG',
-			'branch'   => 'Jeddah',
-		),
-		17 => array(
-			'name'     => 'Jad Haddad',
-			'position' => 'Senior Auditor',
-			'initials' => 'JHd',
-			'branch'   => 'Jeddah',
-		),
-		18 => array(
-			'name'     => 'Khodr Makke',
-			'position' => 'Senior Financial Auditor',
-			'initials' => 'KM',
-			'branch'   => 'Jeddah',
-		),
-		19 => array(
-			'name'     => 'Eli Moutran',
-			'position' => 'Senior Accountant',
-			'initials' => 'EM',
-			'branch'   => 'Jeddah',
-		),
-		20 => array(
-			'name'     => 'Stephanie Moutran',
-			'position' => 'Senior Accountant',
-			'initials' => 'SM',
-			'branch'   => 'Riyadh',
-		),
-		21 => array(
-			'name'     => 'Karen Kordahy',
-			'position' => 'Senior Accountant',
-			'initials' => 'KK',
-			'branch'   => 'Lebanon',
-		),
-		22 => array(
-			'name'     => 'Lama Mohammad',
-			'position' => 'Human Resources Specialist',
-			'initials' => 'LM',
-			'branch'   => 'Jeddah',
-		),
-		23 => array(
-			'name'     => 'Manar Alsobhi',
-			'position' => 'HR Specialist',
-			'initials' => 'MAl',
-			'branch'   => 'Jeddah',
-		),
-		24 => array(
+		array(
 			'name'     => 'Hisham Youssef',
 			'position' => 'Financial Analyst',
 			'initials' => 'HY',
 			'branch'   => 'Jeddah',
 		),
-		25 => array(
+		array(
+			'name'     => 'Mohammad Rushdi',
+			'position' => 'Senior Auditor',
+			'initials' => 'MR',
+			'branch'   => 'Jeddah',
+		),
+		array(
+			'name'     => 'Mohamed Gamal',
+			'position' => 'Senior Auditor',
+			'initials' => 'MG',
+			'branch'   => 'Jeddah',
+		),
+		array(
+			'name'     => 'Jad Haddad',
+			'position' => 'Senior Auditor',
+			'initials' => 'JHd',
+			'branch'   => 'Jeddah',
+		),
+		array(
+			'source'   => 'khodr-makke',
+			'name'     => 'Al-Khedr Makke',
+			'position' => 'Senior Financial Auditor',
+			'initials' => 'AKM',
+			'branch'   => 'Jeddah',
+		),
+		array(
+			'source'   => 'eli-moutran',
+			'name'     => 'Elie Moutran',
+			'position' => 'Senior Accountant',
+			'initials' => 'EM',
+			'branch'   => 'Jeddah',
+		),
+		array(
+			'name'     => 'Stephanie Moutran',
+			'position' => 'Senior Accountant',
+			'initials' => 'SM',
+			'branch'   => 'Riyadh',
+		),
+		array(
+			'name'     => 'Karen Kordahy',
+			'position' => 'Senior Accountant',
+			'initials' => 'KK',
+			'branch'   => 'Lebanon',
+		),
+		array(
+			'name'     => 'Lama Mohammad',
+			'position' => 'Human Resources Specialist',
+			'initials' => 'LM',
+			'branch'   => 'Jeddah',
+		),
+		array(
+			'name'     => 'Manar Alsobhi',
+			'position' => 'HR Specialist',
+			'initials' => 'MAl',
+			'branch'   => 'Jeddah',
+		),
+
+		array(
 			'name'     => 'Sally Maalouf',
 			'position' => 'Accountant',
 			'initials' => 'SaM',
 			'branch'   => 'Lebanon',
 		),
-		26 => array(
+		array(
 			'name'     => 'Nicole Mhanna',
 			'position' => 'Accountant',
 			'initials' => 'NM',
 			'branch'   => 'Riyadh',
 		),
-		27 => array(
+		array(
 			'name'     => 'Ibrahim Warda',
 			'position' => 'Accountant',
 			'initials' => 'IW',
 			'branch'   => 'Riyadh',
 		),
-		28 => array(
+		array(
 			'name'     => 'Shouq Alasmari',
 			'position' => 'Accountant',
 			'initials' => 'SA',
 			'branch'   => 'Jeddah',
 		),
-		29 => array(
+		array(
 			'name'     => 'Alia Zogheib',
 			'position' => 'Administrative Assistant',
 			'initials' => 'AZ',
 			'branch'   => 'Riyadh',
 		),
-		30 => array(
+		array(
 			'name'     => 'Carelle Abdallah',
 			'position' => 'Junior Accountant',
 			'initials' => 'CAb',
 			'branch'   => 'Lebanon',
 		),
-		31 => array(
+		array(
 			'name'     => 'Elias Youssef',
 			'position' => 'Junior Accountant',
 			'initials' => 'EY',

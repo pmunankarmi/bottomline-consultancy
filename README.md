@@ -120,3 +120,7 @@ Theme Settings → Contact and Social includes Notification sender name and Noti
 ## Version 1.3.7 release summary
 
 Version details stay in WordPress’s existing popup and show plain-language bullet points without external links or technical requirements. Versioned summaries live in `bottomline/release-notes.json` and are included in the update manifest and published release notes. Add a summary when preparing a version; otherwise publishing uses a general maintenance note. If release information is unavailable, the popup clearly labels and displays the installed version’s saved summary. Tests verify list rendering, escaping and absence of external links.
+
+## Version 1.3.8 approved content changes
+
+Corrected Elie Moutran and Al-Khedr Makke, placed Hisham Youssef immediately before Mohammad Rushdi, moved Services above Team on the homepage and its editing tabs, changed the contact heading to WhatsApp/Phone, and appended Jad Abou Hamdan’s Buildozer testimonial. Existing testimonials retain their original attribution fields. A one-time administrator update applies these specific changes to existing content; new imports use the same corrections. Existing team URLs and source identifiers are preserved. Bios remain editable on individual team profiles; new biography documents were not supplied.
