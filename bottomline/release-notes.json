@@ -1,4 +1,36 @@
 {
+  "1.3.15": [
+    "Fixed stretched team profile photos and matched the rounded team-card corners.",
+    "Added team biographies, profile navigation and a mobile member dropdown.",
+    "Added Swiper hero and testimonial sliders with smaller testimonial text.",
+    "Moved testimonials into their own admin section and updated client feedback.",
+    "Added Instagram and LinkedIn footer icons and corrected the Get in Touch button text color."
+  ],
+  "1.3.14": [
+    "Reduced testimonial quote font sizes for a more compact layout."
+  ],
+  "1.3.13": [
+    "Kept Get in Touch button text white on all pages and menu states."
+  ],
+  "1.3.12": [
+    "Added a Back to team link to individual biography pages.",
+    "Added an Other team members sidebar to biography pages."
+  ],
+  "1.3.11": [
+    "Added Instagram and LinkedIn icons below the footer email, with editable profile links.",
+    "Simplified team cards to show the name, title and Read biography link.",
+    "Moved testimonials into their own admin section.",
+    "Replaced the two unnamed testimonials with Joe Feghali’s Deep Fit DWC testimonial."
+  ],
+  "1.3.10": [
+    "Added swipe navigation to the hero and testimonials.",
+    "Improved testimonial layouts on mobile and desktop."
+  ],
+  "1.3.9": [
+    "Added the 19 supplied team biographies.",
+    "Added biography previews and links on team cards.",
+    "Updated Hisham Youssef’s role to match the supplied profile."
+  ],
   "1.3.8": [
     "Corrected Elie Moutran and Al-Khedr Makke in the team directory.",
     "Moved Hisham Youssef before Mohammad Rushdi.",

@@ -124,3 +124,11 @@ Version details stay in WordPress’s existing popup and show plain-language bul
 ## Version 1.3.8 approved content changes
 
 Corrected Elie Moutran and Al-Khedr Makke, placed Hisham Youssef immediately before Mohammad Rushdi, moved Services above Team on the homepage and its editing tabs, changed the contact heading to WhatsApp/Phone, and appended Jad Abou Hamdan’s Buildozer testimonial. Existing testimonials retain their original attribution fields. A one-time administrator update applies these specific changes to existing content; new imports use the same corrections. Existing team URLs and source identifiers are preserved. Bios remain editable on individual team profiles; new biography documents were not supplied.
+
+## Version 1.3.9 team biographies (staging)
+
+Imported 19 supplied biographies from Team Bios rows 2–33 in FIXING - team_bios.xlsx. Empty bios remain unchanged. The approved Elie Moutran and Al-Khedr Makke spellings and team order are retained. Hisham Youssef’s role follows the spreadsheet. Cards show a short excerpt linking to the full editable profile. One-time updates preserve subsequent administrator changes. Verified each full biography against its source and rendered profile. This update is prepared for staging, without a public GitHub release.
+
+## Version 1.3.15
+
+Includes the staging changes from 1.3.9–1.3.14 and proportional team profile images with 16px corners. Testimonials are managed in their own post type; the previous option entries are retained as a recovery copy. Social URLs and the native WordPress Site Icon remain site settings.

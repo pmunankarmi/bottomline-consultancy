@@ -93,3 +93,41 @@ function bl_apply_september_content_updates() {
 	}
 }
 add_action( 'admin_init', 'bl_apply_september_content_updates' );
+
+/** Import the supplied biographies once, leaving missing bios and later edits alone. */
+function bl_apply_supplied_team_bios() {
+	if ( ! current_user_can( 'manage_options' ) || ! bl_acf_ready() || get_option( 'bl_team_bios_20260920_done' ) ) {
+		return;
+	}
+	$bios      = json_decode( file_get_contents( __DIR__ . '/team-bios.json' ), true );
+	$completed = (array) get_option( 'bl_team_bios_20260920_members', array() );
+	foreach ( $bios as $source => $fields ) {
+		if ( in_array( $source, $completed, true ) ) {
+			continue;
+		}
+		$members = get_posts(
+			array(
+				'post_type'      => 'team',
+				'post_status'    => array( 'publish', 'draft', 'private', 'pending' ),
+				'posts_per_page' => 1,
+				'meta_key'       => '_bl_source_member',
+				'meta_value'     => $source,
+			)
+		);
+		if ( ! $members ) {
+			continue;
+		}
+		$id = $members[0]->ID;
+		foreach ( $fields as $name => $value ) {
+			update_field( $name, $value, $id );
+		}
+		if ( bl_field( 'biography', $id ) === $fields['biography'] && bl_field( 'position', $id ) === $fields['position'] ) {
+			$completed[] = $source;
+			update_option( 'bl_team_bios_20260920_members', $completed, false );
+		}
+	}
+	if ( count( $completed ) === count( $bios ) ) {
+		update_option( 'bl_team_bios_20260920_done', 1, false );
+	}
+}
+add_action( 'admin_init', 'bl_apply_supplied_team_bios', 20 );

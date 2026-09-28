@@ -22,10 +22,10 @@ if ( ! $slides ) {
 			<circle cx="640" cy="180" r="520" fill="url(#heroGlow)"/>
 		</svg>
 	</div>
-	<div class="hero-slider" id="heroSlider" role="region" aria-roledescription="<?php esc_attr_e( 'carousel', 'bottomline' ); ?>" aria-label="<?php esc_attr_e( 'Highlights', 'bottomline' ); ?>">
-		<div class="hero-track">
+	<div class="hero-slider swiper" id="heroSlider" role="region" aria-roledescription="<?php esc_attr_e( 'carousel', 'bottomline' ); ?>" aria-label="<?php esc_attr_e( 'Highlights', 'bottomline' ); ?>">
+		<div class="hero-track swiper-wrapper">
 			<?php foreach ( $slides as $index => $slide ) : ?>
-				<div class="hero-slide" data-slide="<?php echo (int) $index; ?>">
+				<div class="hero-slide swiper-slide" data-slide="<?php echo (int) $index; ?>">
 					<div class="container">
 						<div class="hero-split">
 							<div class="hero-content">

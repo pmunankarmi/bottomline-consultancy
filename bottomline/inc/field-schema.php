@@ -66,7 +66,7 @@ return array(
 			'name'         => 'social_links',
 			'label'        => 'Social links',
 			'type'         => 'repeater',
-			'instructions' => 'Plain text only. Leave optional content empty to hide it.',
+			'instructions' => 'Use Instagram or LinkedIn as the network name to display its footer icon. Enter the full profile URL. Leave empty to hide.',
 			'sub_fields'   => array(
 				array(
 					'name'         => 'label',

@@ -1,6 +1,6 @@
 <?php
 /** Original content: used only by the explicit importer. */
-return array(
+$data = array(
 	'scopes' => array(
 		'options'      => array(
 			'site_logo'              => array(
@@ -1672,3 +1672,14 @@ Fully Saudi-Compliant.',
 		),
 	),
 );
+
+// Supplied biographies are shared by fresh imports and the one-time content update.
+$bios = json_decode( file_get_contents( __DIR__ . '/team-bios.json' ), true );
+foreach ( $data['team'] as &$member ) {
+	$source = $member['source'] ?? sanitize_title( $member['name'] );
+	if ( isset( $bios[ $source ] ) ) {
+		$member = array_merge( $member, $bios[ $source ] );
+	}
+}
+unset( $member );
+return $data;

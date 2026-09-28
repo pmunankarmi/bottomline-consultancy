@@ -135,7 +135,7 @@ while ( have_posts() ) :
 	<?php endif; ?>
 	<?php
 	$data = bl_field( 'section_9', get_the_ID() );
-	if ( bl_rows( bl_field( 'testimonials', 'option' ) ) && bl_has_content( $data ) ) :
+	if ( bl_testimonials() && bl_has_content( $data ) ) :
 		?>
 		<section class="testimonial-section">
 			<div class="container">

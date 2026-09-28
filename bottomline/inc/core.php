@@ -35,18 +35,33 @@ add_action(
 			array(),
 			null,
 		);
+		$slider_dependencies = array();
+		if ( is_front_page() ) {
+			wp_enqueue_style( 'bl-swiper', $uri . '/assets/vendor/swiper/swiper-bundle.min.css', array(), '12.0.3' );
+			wp_enqueue_script(
+				'bl-swiper',
+				$uri . '/assets/vendor/swiper/swiper-bundle.min.js',
+				array(),
+				'12.0.3',
+				array(
+					'in_footer' => true,
+					'strategy'  => 'defer',
+				)
+			);
+			$slider_dependencies[] = 'bl-swiper';
+		}
 		foreach ( array( 'styles', 'wordpress' ) as $file ) {
 			wp_enqueue_style(
 				'bl-' . $file,
 				$uri . '/assets/css/' . $file . '.css',
-				$file === 'WordPress' ? array( 'bl-styles' ) : array( 'bl-font' ),
+				$file === 'WordPress' ? array( 'bl-styles' ) : array_merge( array( 'bl-font' ), $slider_dependencies ),
 				filemtime( get_template_directory() . '/assets/css/' . $file . '.css' ),
 			);
 		}
 		wp_enqueue_script(
 			'bl-main',
 			$uri . '/assets/js/main.js',
-			array(),
+			$slider_dependencies,
 			filemtime( get_template_directory() . '/assets/js/main.js' ),
 			array(
 				'in_footer' => true,

@@ -683,13 +683,12 @@ p { color: var(--ink-soft); }
 .hero-track {
     display: flex;
     width: 100%;
-    transition: transform 0.9s cubic-bezier(0.65, 0, 0.35, 1);
     will-change: transform;
 }
 .hero-slide {
     flex: 0 0 100%;
     min-width: 0;
-    opacity: 0.55;
+    opacity: 1;
     transition: opacity 0.6s ease 0.05s;
 }
 .hero-slide.is-active { opacity: 1; }
@@ -2442,7 +2441,7 @@ a.office:hover .office-city { color: var(--green-dark); }
     border-radius: 50%;
     filter: blur(90px);
     will-change: transform;
-    opacity: 0.55;
+    opacity: 1;
     transform: translateZ(0);
 }
 .mesh-blob-1 {
@@ -2683,7 +2682,7 @@ a.office:hover .office-city { color: var(--green-dark); }
     font-weight: 600;
     color: var(--ink-soft);
     letter-spacing: -0.01em;
-    opacity: 0.55;
+    opacity: 1;
     white-space: nowrap;
     transition: opacity 0.2s var(--ease);
     display: inline-flex;
@@ -3181,8 +3180,8 @@ a.office:hover .office-city { color: var(--green-dark); }
     font-weight: 700;
 }
 .testimonial-quote {
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 1.125rem;
+    line-height: 1.65;
     color: white;
     font-weight: 500;
     letter-spacing: -0.01em;
@@ -3410,7 +3409,7 @@ svg.political-map {
         rgba(0, 154, 102, 0.30) 50%,
         transparent 75%);
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 1;
     filter: blur(2px);
     transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), filter 0.25s var(--ease);
     z-index: -1;
@@ -3834,7 +3833,7 @@ a.country-branch:focus-visible {
     .bento-tile.featured { grid-column: span 2; }
     .map-wrap { grid-template-columns: 1fr; gap: 32px; }
     .testimonial { padding: 40px 32px; }
-    .testimonial-quote { font-size: 1.125rem; }
+    .testimonial-quote { font-size: 1rem; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 

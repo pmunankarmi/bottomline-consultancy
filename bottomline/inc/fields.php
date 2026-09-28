@@ -18,8 +18,7 @@ add_action(
 		);
 		foreach (
 		array(
-			'clients'      => __( 'Clients', 'bottomline' ),
-			'testimonials' => __( 'Testimonials', 'bottomline' ),
+			'clients' => __( 'Clients', 'bottomline' ),
 		)
 		as $slug => $title
 		) {
@@ -77,12 +76,17 @@ add_action(
 					),
 				);
 			} elseif ( $scope === 'testimonials' ) {
+				$fields = array_values( array_filter( $fields[0]['sub_fields'], fn( $field ) => $field['name'] !== 'author' ) );
+				foreach ( $fields as &$field ) {
+					$field['key'] = 'field_bl_testimonial_' . $field['name'];
+				}
+				unset( $field );
 				$location = array(
 					array(
 						array(
-							'param'    => 'options_page',
+							'param'    => 'post_type',
 							'operator' => '==',
-							'value'    => 'bl-testimonials',
+							'value'    => 'testimonial',
 						),
 					),
 				);

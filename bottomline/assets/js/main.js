@@ -3,6 +3,13 @@
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    const teamSelect = document.querySelector('.team-member-select');
+    if (teamSelect) {
+        teamSelect.addEventListener('change', () => {
+            if (teamSelect.value) window.location.assign(teamSelect.value);
+        });
+    }
+
     // --- Footer year ---
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -111,87 +118,83 @@
         });
     };
 
-    // --- Hero sliding banner ---
+    // Swiper handles slide movement, touch gestures and navigation.
     const heroSlider = document.getElementById('heroSlider');
-    if (heroSlider && heroSlider.querySelectorAll('.hero-slide').length) {
-        const track = heroSlider.querySelector('.hero-track');
+    if (heroSlider && typeof Swiper !== 'undefined') {
         const slides = heroSlider.querySelectorAll('.hero-slide');
         const dots = heroSlider.querySelectorAll('.hero-dot');
-        const prevBtn = heroSlider.querySelector('.hero-prev');
-        const nextBtn = heroSlider.querySelector('.hero-next');
-        let idx = 0;
-        let autoTimer = null;
-        let paused = false;
         const pauseButton = heroSlider.querySelector('.hero-pause');
-        const total = slides.length;
-
-        const go = (n) => {
-            idx = ((n % total) + total) % total;
-            track.style.transform = `translateX(-${idx * 100}%)`;
-            slides.forEach((s, i) => { s.classList.toggle('is-active', i === idx); s.inert = i !== idx; s.setAttribute('aria-hidden', String(i !== idx)); });
-            dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
-            animateSlideNumbers(slides[idx]);
+        let paused = prefersReducedMotion;
+        const syncSlides = (swiper) => {
+            slides.forEach((slide, index) => {
+                const active = index === swiper.activeIndex;
+                slide.classList.toggle('is-active', active);
+                slide.inert = !active;
+                slide.setAttribute('aria-hidden', String(!active));
+            });
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('is-active', index === swiper.activeIndex);
+                dot.setAttribute('aria-current', String(index === swiper.activeIndex));
+            });
+            if (slides[swiper.activeIndex]) animateSlideNumbers(slides[swiper.activeIndex]);
         };
-        const next = () => go(idx + 1);
-        const prev = () => go(idx - 1);
-        const startAuto = () => {
-            if (prefersReducedMotion || paused || total < 2 || document.hidden) return;
-            stopAuto();
-            autoTimer = setInterval(next, 5000);
+        const hero = new Swiper(heroSlider, {
+            speed: prefersReducedMotion ? 0 : 700,
+            rewind: true,
+            watchOverflow: true,
+            navigation: {
+                prevEl: heroSlider.querySelector('.hero-prev'),
+                nextEl: heroSlider.querySelector('.hero-next'),
+                addIcons: false,
+            },
+            autoplay: slides.length > 1 && !prefersReducedMotion
+                ? { delay: 5000, disableOnInteraction: false } : false,
+            on: { init: syncSlides, slideChange: syncSlides },
+        });
+        const syncAutoplay = () => {
+            const blocked = paused || document.hidden || heroSlider.matches(':hover')
+                || heroSlider.contains(document.activeElement);
+            if (blocked || slides.length < 2) hero.autoplay.stop();
+            else hero.autoplay.start();
         };
-        const stopAuto = () => { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } };
-
-        dots.forEach((d) => d.addEventListener('click', () => {
-            go(parseInt(d.getAttribute('data-target'), 10) || 0);
-            startAuto();
-        }));
-        if (prevBtn) prevBtn.addEventListener('click', () => { prev(); startAuto(); });
-        if (nextBtn) nextBtn.addEventListener('click', () => { next(); startAuto(); });
-        heroSlider.addEventListener('mouseenter', stopAuto);
-        heroSlider.addEventListener('mouseleave', startAuto);
-
-        // Touch swipe
-        let touchStartX = null;
-        heroSlider.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-            stopAuto();
-        }, { passive: true });
-        heroSlider.addEventListener('touchend', (e) => {
-            if (touchStartX == null) return;
-            const dx = e.changedTouches[0].clientX - touchStartX;
-            if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); }
-            touchStartX = null;
-            startAuto();
-        });
-
-        go(0);
-        if (pauseButton) pauseButton.addEventListener('click', () => { paused = !paused; pauseButton.setAttribute('aria-pressed', String(paused)); paused ? stopAuto() : startAuto(); });
-        heroSlider.addEventListener('focusin', stopAuto);
-        heroSlider.addEventListener('focusout', (e) => { if (!heroSlider.contains(e.relatedTarget)) startAuto(); });
-        document.addEventListener('visibilitychange', () => { document.hidden ? stopAuto() : startAuto(); });
-        animateSlideNumbers(slides[0]);
-        // Replay numbers on card hover for tactile feel
-        slides.forEach((slide) => {
-            const card = slide.querySelector('.hero-dash');
-            if (!card) return;
-            card.addEventListener('mouseenter', () => {
-                if (slide.classList.contains('is-active')) animateSlideNumbers(slide);
+        dots.forEach((dot, index) => dot.addEventListener('click', () => hero.slideTo(index)));
+        if (pauseButton) {
+            pauseButton.setAttribute('aria-pressed', String(paused));
+            pauseButton.addEventListener('click', () => {
+                paused = !paused;
+                pauseButton.setAttribute('aria-pressed', String(paused));
+                syncAutoplay();
             });
-            // Per-tile replay on slide 2 growth grid
-            slide.querySelectorAll('.gg-tile').forEach((tile) => {
-                tile.addEventListener('mouseenter', () => {
-                    tile.querySelectorAll('.num[data-target]').forEach((el) => animateNum(el, 900));
-                });
-            });
-            // Per-row replay on P&L table
-            slide.querySelectorAll('.pl-mini tr').forEach((row) => {
-                row.addEventListener('mouseenter', () => {
-                    row.querySelectorAll('.num[data-target]').forEach((el) => animateNum(el, 700));
-                });
-            });
-        });
-        startAuto();
+        }
+        heroSlider.addEventListener('mouseenter', syncAutoplay);
+        heroSlider.addEventListener('mouseleave', syncAutoplay);
+        heroSlider.addEventListener('focusin', syncAutoplay);
+        heroSlider.addEventListener('focusout', () => requestAnimationFrame(syncAutoplay));
+        document.addEventListener('visibilitychange', syncAutoplay);
+        syncAutoplay();
     }
+
+    document.querySelectorAll('.testimonial-slider').forEach((slider) => {
+        if (typeof Swiper === 'undefined') return;
+        new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            speed: prefersReducedMotion ? 0 : 500,
+            rewind: true,
+            watchOverflow: true,
+            breakpoints: { 801: { slidesPerView: 2 } },
+            navigation: {
+                prevEl: slider.querySelector('.testimonial-prev'),
+                nextEl: slider.querySelector('.testimonial-next'),
+                addIcons: false,
+            },
+            pagination: {
+                el: slider.querySelector('.testimonial-pagination'),
+                clickable: true,
+                bulletElement: 'button',
+            },
+        });
+    });
 
     // --- Hero dashboard KPI count-up ---
     const kpiNums = document.querySelectorAll('.kpi-num');
