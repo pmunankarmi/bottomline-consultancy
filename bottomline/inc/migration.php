@@ -216,10 +216,17 @@ function bl_import_content() {
 				}
 			}
 			foreach ( $schema['team_post'] as $field ) {
+				if ( $field['name'] === 'photo' ) {
+					if ( ! bl_meta_exists( $id, 'photo' ) && isset( $member['photo'] ) ) {
+						update_post_meta( $id, 'photo', absint( $member['photo'] ) );
+					}
+					continue;
+				}
 				if ( ! bl_meta_exists( $id, $field['name'] ) && isset( $member[ $field['name'] ] ) ) {
 					update_field( $field['key'], $member[ $field['name'] ], $id );
 				}
 			}
+			bl_migrate_team_featured_image( $id );
 		}
 		// Establish initial reading/menu settings only once. Clearing them later is respected.
 		if ( ! get_option( 'bl_initial_configuration_done' ) ) {

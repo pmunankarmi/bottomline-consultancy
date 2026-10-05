@@ -66,6 +66,7 @@ add_action(
 				}
 				$fields = $ordered;
 			} elseif ( $scope === 'team_post' ) {
+				$fields = array_values( array_filter( $fields, fn( $field ) => $field['name'] !== 'photo' ) );
 				$location = array(
 					array(
 						array(

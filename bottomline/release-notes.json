@@ -1,4 +1,14 @@
 {
+  "1.3.17": [
+    "Standardized team directory and profile photos to responsive 4:5 portrait frames.",
+    "Added automatic loading on the team archive, following the saved member order, with a Load more fallback.",
+    "Removed image and card links for team members without biographies.",
+    "Included Featured Image support and preservation of existing team photos."
+  ],
+  "1.3.16": [
+    "Switched team photos to WordPress Featured Images.",
+    "Migrated existing team photos while preserving current featured images."
+  ],
   "1.3.15": [
     "Fixed stretched team profile photos and matched the rounded team-card corners.",
     "Added team biographies, profile navigation and a mobile member dropdown.",

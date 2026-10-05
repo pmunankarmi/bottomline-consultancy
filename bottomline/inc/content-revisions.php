@@ -131,3 +131,38 @@ function bl_apply_supplied_team_bios() {
 	}
 }
 add_action( 'admin_init', 'bl_apply_supplied_team_bios', 20 );
+
+/** Move a legacy team photo once, preserving existing and later thumbnail choices. */
+function bl_migrate_team_featured_image( $post_id ) {
+	if ( get_post_meta( $post_id, '_bl_featured_image_migrated', true ) ) {
+		return;
+	}
+	$photo_id = absint( get_post_meta( $post_id, 'photo', true ) );
+	if ( ! has_post_thumbnail( $post_id ) && $photo_id && wp_attachment_is_image( $photo_id ) ) {
+		if ( ! set_post_thumbnail( $post_id, $photo_id ) ) {
+			return;
+		}
+	}
+	update_post_meta( $post_id, '_bl_featured_image_migrated', 1 );
+}
+
+/** Migrate team photos when an administrator first loads the updated theme. */
+function bl_migrate_team_featured_images() {
+	if ( ! current_user_can( 'manage_options' ) || get_option( 'bl_team_featured_images_migrated' ) ) {
+		return;
+	}
+	$members = get_posts( array(
+		'post_type' => 'team',
+		'post_status' => array( 'publish', 'draft', 'private', 'pending', 'future', 'trash' ),
+		'posts_per_page' => -1,
+		'fields' => 'ids',
+	) );
+	foreach ( $members as $post_id ) {
+		bl_migrate_team_featured_image( $post_id );
+		if ( ! get_post_meta( $post_id, '_bl_featured_image_migrated', true ) ) {
+			return;
+		}
+	}
+	update_option( 'bl_team_featured_images_migrated', 1, false );
+}
+add_action( 'admin_init', 'bl_migrate_team_featured_images', 40 );

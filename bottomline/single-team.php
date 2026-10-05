@@ -43,7 +43,7 @@ while ( have_posts() ) :
 			<div class="team-profile-layout">
 				<div class="team-profile-content">
 					<h1><?php the_title(); ?></h1>
-					<?php bl_image( bl_field( 'photo' ), 'profile-photo' ); ?>
+					<?php the_post_thumbnail( 'large', array( 'class' => 'profile-photo' ) ); ?>
 					<p class="lead"><?php echo bl_text( bl_field( 'position' ) ); ?></p>
 					<?php if ( bl_field( 'biography' ) ) : ?>
 						<div class="team-biography"><?php echo wpautop( esc_html( bl_field( 'biography' ) ) ); ?></div>

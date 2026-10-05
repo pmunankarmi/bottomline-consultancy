@@ -1,5 +1,11 @@
 # Validation record
 
+## Version 1.3.17 — 5 October 2026
+
+The live team archive loaded all 31 members through infinite scrolling in their saved order and stopped at the final batch. Appended cards were visually verified after removing their uninitialized entrance-animation class. All 31 directory cards were checked: the four without biographies had no image or name links, while biography cards remained linked; the same behavior was verified in an appended archive batch. Portrait frames were verified at 320 × 400px on a profile and 272 × 340px in the mobile preview. The theme now includes the same 4:5 CSS previously saved in WordPress Additional CSS. Member ordering remains editable WordPress content, not a theme migration.
+
+Release packaging passed PHP and JavaScript syntax checks. The featured-image integration test passed legacy migration, removal persistence, and preservation of existing featured images in the disposable local WordPress installation.
+
 Completed on 14 September 2026 in an isolated local installation. The production WordPress site was not modified. The GitHub repository is used for theme releases.
 
 ## Version 1.2 updater

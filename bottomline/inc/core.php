@@ -85,7 +85,7 @@ add_action(
 				'has_archive'  => 'our-team',
 				'rewrite'      => array( 'slug' => 'team-member' ),
 				'menu_icon'    => 'dashicons-groups',
-				'supports'     => array( 'title', 'page-attributes' ),
+				'supports'     => array( 'title', 'page-attributes', 'thumbnail' ),
 				'show_in_rest' => true,
 			)
 		);
