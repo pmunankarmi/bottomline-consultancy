@@ -216,3 +216,34 @@
     object-fit: cover;
     object-position: center top;
 }
+
+/* Align card links and client names when text wraps. */
+.team-card,
+.team-card > a {
+    display: flex;
+    flex-direction: column;
+}
+.team-card > a,
+.team-card .team-body {
+    flex: 1;
+}
+.team-card .team-photo {
+    flex-shrink: 0;
+}
+.team-card .team-body {
+    display: flex;
+    flex-direction: column;
+}
+.team-card .team-bio-link {
+    margin-top: auto;
+    padding-top: 14px;
+}
+.testimonial-slider .testimonial {
+    justify-content: flex-start;
+}
+.testimonial-slider .testimonial-quote {
+    flex: 1;
+}
+.testimonial-slider .testimonial > p:last-child:not(.testimonial-quote) {
+    min-height: 2lh;
+}

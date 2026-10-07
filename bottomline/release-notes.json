@@ -1,4 +1,8 @@
 {
+  "1.3.18": [
+    "Aligned Read biography links across each row of team cards.",
+    "Aligned client names between testimonial cards with different quote lengths."
+  ],
   "1.3.17": [
     "Standardized team directory and profile photos to responsive 4:5 portrait frames.",
     "Added automatic loading on the team archive, following the saved member order, with a Load more fallback.",
